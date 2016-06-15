@@ -4,7 +4,7 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="img/SENA.jpg" class="img-circle" alt="User Image">
+                <img src="../img/SENA.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
                 <p>Alexander Pierce</p>
@@ -79,6 +79,16 @@
                     <span>Produccion</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
+                
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="#"><i class="fa fa-ticket"></i> Talla <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="<?php echo url('talla/create') ?>"><i class="fa fa-circle-o"></i> Crear</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Consultar</a></li>
+                        </ul>
+                    </li>
+                </ul>
                 <ul class="treeview-menu">
                     <li>
                         <a href="#"><i class="fa fa-ticket"></i> Producto <i class="fa fa-angle-left pull-right"></i></a>

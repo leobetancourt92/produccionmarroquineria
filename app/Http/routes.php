@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::controllers([
     'administracion'=>'Modulos\Administracion\personaController',
     'produccion'=>'Modulos\Produccion\ProduccionController',
+    
+    /*Modulo de Produccion*/
+    'talla'=>'Modulos\Produccion\tallaController'
 //    'Color'=>'Modulos\Produccion\Color\ColorController'
 ]);
 
