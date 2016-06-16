@@ -3704,3 +3704,6 @@ Stack trace:
 #9 C:\xampp\htdocs\produccionmarroquineria\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(152): Illuminate\Foundation\Application->make('App\\Http\\Middle...')
 #10 C:\xampp\htdocs\produccionmarroquineria\public\index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
 #11 {main}  
+[2016-06-16 01:25:30] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '.'' in C:\xampp\htdocs\produccionmarroquineria\storage\framework\views\ece6e218f5907c5ab288efb7fb2f474afd97d005.php:7
+Stack trace:
+#0 {main}  
