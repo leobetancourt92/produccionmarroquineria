@@ -20,7 +20,7 @@
       <!-- User Account: style can be found in dropdown.less -->
       <li class="dropdown user user-menu">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          <img src="../img/SENA.jpg" class="user-image" alt="User Image">
+          <img src="<?php echo url("img/SENA.jpg")?>" class="user-image" alt="User Image">
           <span class="hidden-xs">SENA</span>
         </a>
         <ul class="dropdown-menu">
