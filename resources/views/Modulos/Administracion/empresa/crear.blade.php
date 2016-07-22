@@ -7,6 +7,7 @@
  * @Categoria: ${project_name}
  */
 ?>
+
 @extends('template.dashboard')
 @section('content')
 
