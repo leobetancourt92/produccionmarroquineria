@@ -36,14 +36,14 @@
                         <a href="#"><i class="fa fa-user"></i> Persona <i class="fa fa-angle-left pull-right"></i></a>
                         <ul class="treeview-menu">
                             <li><a href="<?php echo url("administracion/crear")?>"><i class="fa fa-circle-o"></i> Crear</a></li>
-                            <li><a href="<?php echo url("administracion/crear")?>""><i class="fa fa-circle-o"></i> Consultar</a></li>
+                            <li><a href="<?php echo url("administracion/crear")?>"><i class="fa fa-circle-o"></i> Consultar</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-cog"></i> Empresa <i class="fa fa-angle-left pull-right"></i></a>
                         <ul class="treeview-menu">
-                            <li><a href="<?php echo url("administracion/crear")?>""><i class="fa fa-circle-o"></i> Crear</a></li>
-                            <li><a href="<?php echo url("administracion/crear")?>""><i class="fa fa-circle-o"></i> Consultar</a></li>
+                            <li><a href="<?php echo url("administracion/crear")?>"><i class="fa fa-circle-o"></i> Crear</a></li>
+                            <li><a href="<?php echo url("administracion/crear")?>"<i class="fa fa-circle-o"></i> Consultar</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -58,8 +58,8 @@
                     <li>
                         <a href="#"><i class="fa fa-ticket"></i> Producto <i class="fa fa-angle-left pull-right"></i></a>
                         <ul class="treeview-menu">
-                            <li><a href="<?php echo url('produccion/create') ?>"><i class="fa fa-circle-o"></i> Crear</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Consultar</a></li>
+                            <li><a href="<?php echo url('producto/create') ?>"><i class="fa fa-circle-o"></i> Crear</a></li>
+                            <li><a href="<?php echo url('producto/listar') ?>"><i class="fa fa-circle-o"></i> Consultar</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -133,10 +133,6 @@
                     </li>
                 </ul>
             </li>
-
-
-
-
         </ul>
     </section>
     <!-- /.sidebar -->

@@ -1,0 +1,94 @@
+<?php
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+?>
+@extends('plantilla.estructura')
+@section('content')
+
+    <!-- Confirmacion de Desactivar -->
+    <script src="{{ asset('js/Confirmacion.js') }}"></script>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Default box -->
+        <div class="box">
+            <div class="box-header with-border">
+                <center><h3 class="box-title"> Listado de Tallas</h3></center>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i
+                                class="fa fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="box box-primary">
+                        <div class="box-header">
+                            <h3 class="box-title">Listado de Tallas</h3>
+                        </div><!-- /.box-header -->
+                        <div class="box-success">
+                            <div class="table-responsive">
+                                <table id="tabla" class="table table-bordered table-striped">
+                                    <thead>
+                                    <tr>
+                                        <td>No</td>
+                                        <td>Descripcion</td>
+                                        <td>Color</td>
+                                        <td>Talla</td>
+                                        <td>Cantidad</td>
+                                        <td>Costo</td>
+                                        <td>Estado</td>
+                                        <td>Acciones</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php foreach($productos as $producto){?>
+                                    <tr>
+                                        <td><?php echo $producto->pro_id ?></td>
+                                        <td><?php echo $producto->pro_descripcion ?></td>
+                                        <td><?php echo $producto->tal_dimension?></td>
+                                        <td><?php echo $producto->col_descripcion ?></td>
+                                        <td><?php echo $producto->pro_cantidad ?></td>
+                                        <td><?php echo $producto->pro_costo?></td>
+                                        <td>
+                                            <?php if($producto->pro_estado == 1 ): ?>
+                                            <span class='label label-success'>
+                                                        <font class='h5'>Activo</font>
+                                                    </span>
+                                            <?php else: ?>
+                                            <span class='label label-danger'>
+                                                        <font class='h5'>Inactivo</font>
+                                                    </span>
+                                            <?php endif; ?>
+                                        </td>
+                                        <td>
+                                            <a href="<?php echo url("producto/ver/" . $producto->pro_id) ?>"
+                                               class="btn btn-info btn-sm">Ver</a>
+                                            <a href="<?php echo url("producto/editar/" . $producto->pro_id) ?>"
+                                               class="btn btn-primary btn-sm">Editar</a>
+                                            <?php if($producto->pro_estado == 1 ): ?>
+                                            <button onclick="Desactivar(<?php echo $producto->pro_id?>)"
+                                                    class="btn btn-danger btn-sm" id="dss">Deshabilitar
+                                            </button>
+                                            <?php else: ?>
+                                            <button onclick="Activar(<?php echo $producto->pro_id?>)"
+                                                    class="btn btn-success btn-sm" id="add">Activar
+                                            </button>
+                                            <?php endif; ?>
+                                        </td>
+                                    </tr>
+                                    <?php }?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div><!-- /.box box-primary -->
+                </div><!-- /.col-md-12 -->
+            </div><!-- /.box-body -->
+        </div><!-- /.box-->
+    </section>
+@endsection

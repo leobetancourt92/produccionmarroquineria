@@ -1,17 +1,30 @@
-<?php
-/**
- * @Nombre: ${user}Luis Fernando Angulo Palacios
- * @Fecha:  12/06/2016
- * @Hora:  02:19 PM
- * @Año:   ${year}
- * @Categoria: ${project_name}
- */
-?>
 
+
+<script>
+    $( ".select2-single, .select2-multiple" ).select2( {
+        theme: "bootstrap",
+        placeholder: "Select a State",
+        maximumSelectionSize: 6,
+        containerCssClass: ':all:'
+    } );
+
+    $( ":checkbox" ).on( "click", function() {
+        $( this ).parent().nextAll( "select" ).prop( "disabled", !this.checked );
+    });
+</script>
 <!-- REQUIRED JS SCRIPTS -->
-
-<!-- jQuery 2.1.3 -->
-<script src="{{ asset('plugins/jQuery/jQuery-2.2.0.min.js') }}"></script>
+<!-- jQuery-2.2.0 -->
+<!--<script src="{{ asset('plugins/jQuery/jQuery-2.2.0.min.js') }}" type="text/javascript"></script>-->
+<!-- DataTables -->
+<script src="{{ asset('plugins/datatables/jquery.dataTables.min.js') }}" type="text/javascript"></script>
+<!-- BootstrapDataTables  3.3.2 JS -->
+<script src="{{ asset('plugins/datatables/dataTables.bootstrap.min.js') }}" type="text/javascript"></script>
+<!-- SweetAlert -->
+<script src="{{ asset('js/sweetalert.min.js') }}" type="text/javascript"></script>
+<!-- FormValidate -->
+<script src="{{ asset('js/require_form.js') }}" type="text/javascript"></script>
+<!-- Validate.js-->
+<script src="{{ asset('js/jquery.validate.js') }}" type="text/javascript"></script>
 <!-- Bootstrap 3.3.2 JS -->
 <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
 <!-- FastClick -->
@@ -31,3 +44,5 @@
 <script src="{{ asset('js/pages/dashboard2.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
 
+<!-- Select2 4.0.3-->
+<script src="{{ asset('plugins/select2/select2.min.js') }}"></script>

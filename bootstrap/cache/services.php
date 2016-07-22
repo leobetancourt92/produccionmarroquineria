@@ -22,10 +22,12 @@
     18 => 'Illuminate\\Translation\\TranslationServiceProvider',
     19 => 'Illuminate\\Validation\\ValidationServiceProvider',
     20 => 'Illuminate\\View\\ViewServiceProvider',
-    21 => 'App\\Providers\\AppServiceProvider',
-    22 => 'App\\Providers\\AuthServiceProvider',
-    23 => 'App\\Providers\\EventServiceProvider',
-    24 => 'App\\Providers\\RouteServiceProvider',
+    21 => 'UxWeb\\SweetAlert\\SweetAlertServiceProvider',
+    22 => 'Rap2hpoutre\\LaravelLogViewer\\LaravelLogViewerServiceProvider',
+    23 => 'App\\Providers\\AppServiceProvider',
+    24 => 'App\\Providers\\AuthServiceProvider',
+    25 => 'App\\Providers\\EventServiceProvider',
+    26 => 'App\\Providers\\RouteServiceProvider',
   ),
   'eager' => 
   array (
@@ -38,10 +40,12 @@
     6 => 'Illuminate\\Pagination\\PaginationServiceProvider',
     7 => 'Illuminate\\Session\\SessionServiceProvider',
     8 => 'Illuminate\\View\\ViewServiceProvider',
-    9 => 'App\\Providers\\AppServiceProvider',
-    10 => 'App\\Providers\\AuthServiceProvider',
-    11 => 'App\\Providers\\EventServiceProvider',
-    12 => 'App\\Providers\\RouteServiceProvider',
+    9 => 'UxWeb\\SweetAlert\\SweetAlertServiceProvider',
+    10 => 'Rap2hpoutre\\LaravelLogViewer\\LaravelLogViewerServiceProvider',
+    11 => 'App\\Providers\\AppServiceProvider',
+    12 => 'App\\Providers\\AuthServiceProvider',
+    13 => 'App\\Providers\\EventServiceProvider',
+    14 => 'App\\Providers\\RouteServiceProvider',
   ),
   'deferred' => 
   array (

@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('plantilla.estructura');
 });
@@ -18,7 +19,7 @@ Route::get('/', function () {
 
 Route::controllers([
     'administracion'=>'Modulos\Administracion\personaController',
-    'produccion'=>'Modulos\Produccion\ProduccionController',
+    'producto'=>'Modulos\Produccion\ProductoController',
     
     /*Modulo de Produccion*/
     'talla'=>'Modulos\Produccion\tallaController'

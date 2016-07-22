@@ -6,7 +6,10 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.2.*"
+        "laravel/framework": "5.2.*",
+        "infinety/alerts": "*@dev",
+        "UxWeb/sweet-alert": "*@dev",
+        "rap2hpoutre/laravel-log-viewer": "^0.7.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - pp_marroquineria@localhost" uuid="41e73a69-6679-4a97-85ad-7153c20ac9df">
+    <database-info product="MySQL" version="5.7.9" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.2">
+      <schema id="1" name="pp_marroquineria"/>
+      <table id="2" parent="1" name="color"/>
+      <table id="3" parent="1" name="producto"/>
+      <table id="4" parent="1" name="talla"/>
+      <table id="5" parent="1" name="tipo_producto"/>
+      <column id="6" parent="2" name="col_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="7" parent="2" name="col_descripcion">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="8" parent="2" name="col_estado">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <key id="9" parent="2" name="PRIMARY">
+        <columns>col_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="10" parent="3" name="pro_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="11" parent="3" name="pro_descripcion">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="12" parent="3" name="pro_costo">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="13" parent="3" name="pro_cantidad">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="14" parent="3" name="tal_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="15" parent="3" name="col_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="16" parent="3" name="pro_estado">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <key id="17" parent="3" name="PRIMARY">
+        <columns>pro_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="18" parent="3" name="fk_producto_color1">
+        <columns>col_id</columns>
+        <ref-key>color.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="19" parent="3" name="fk_producto_talla1">
+        <columns>tal_id</columns>
+        <ref-key>talla.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="20" parent="4" name="tal_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="21" parent="4" name="tal_dimension">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="22" parent="4" name="tipo_producto_tip_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="23" parent="4" name="tal_estado">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <key id="24" parent="4" name="PRIMARY">
+        <columns>tal_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="25" parent="4" name="fk_talla_tipo_producto1">
+        <columns>tipo_producto_tip_id</columns>
+        <ref-key>tipo_producto.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="26" parent="5" name="tip_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="27" parent="5" name="tip_descripcion">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="28" parent="5" name="tip_estado">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <key id="29" parent="5" name="PRIMARY">
+        <columns>tip_id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

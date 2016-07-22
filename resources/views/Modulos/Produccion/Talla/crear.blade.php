@@ -12,7 +12,7 @@
                     <i class="glyphicon glyphicon-info-sign"> </i>
                     A continuaci&oacute;n podr&aacute; crear una talla
                 </div>
-                <form method="POST" action="{{url("talla/crear")}}">
+                <form method="POST" action="<?php url("talla/crear") ?>">
                     
                     <input type="text" name="" />
                     <input type="submit" name="" />
