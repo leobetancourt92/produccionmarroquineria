@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Redirect;
 use DB;
 use Alert;
 
+
 class ProductoController extends Controller {
 
     /**
@@ -21,9 +22,10 @@ class ProductoController extends Controller {
      *
      * @return Response
      */
-    public function __construct()
-    {
-        //	$this->middleware('guest');
+     public function __construct() {
+        $this->middleware('auth');
+        //$this->middleware('control_menu');   
+
     }
 
     /**

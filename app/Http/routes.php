@@ -13,7 +13,7 @@
 
 
 Route::get('/', function () {
-    return view('plantilla.estructura');
+    return view('Modulos.Usuarios.Usuario.login');
 });
 
 
@@ -22,8 +22,10 @@ Route::controllers([
     'producto'=>'Modulos\Produccion\ProductoController',
     
     /*Modulo de Produccion*/
-    'talla'=>'Modulos\Produccion\tallaController'
+    'talla'=>'Modulos\Produccion\tallaController',
 //    'Color'=>'Modulos\Produccion\Color\ColorController'
+    /*Modulo de Usuarios*/
+
 ]);
 
 
