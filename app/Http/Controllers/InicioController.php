@@ -1,6 +1,6 @@
 <?php namespace App\Http\Controllers;
 
-class WelcomeController extends Controller {
+class InicioController extends Controller {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -20,7 +20,7 @@ class WelcomeController extends Controller {
 	 */
 	public function __construct()
 	{
-		$this->middleware('guest');
+		$this->middleware('auth');
 	}
 
 	/**
