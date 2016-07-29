@@ -11,23 +11,11 @@
 |
 */
 
+Route::get('/', 'WelcomeController@index');
 
-Route::get('/', function () {
-    return view('Modulos.Usuarios.Usuario.login');
-});
-
+Route::get('home', 'HomeController@index');
 
 Route::controllers([
-    'administracion'=>'Modulos\Administracion\personaController',
-    'producto'=>'Modulos\Produccion\ProductoController',
-    
-    /*Modulo de Produccion*/
-    'talla'=>'Modulos\Produccion\tallaController',
-//    'Color'=>'Modulos\Produccion\Color\ColorController'
-    /*Modulo de Usuarios*/
-
+	'auth' => 'Auth\AuthController',
+	'password' => 'Auth\PasswordController',
 ]);
-
-
-
-
