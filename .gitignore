@@ -1,3 +1,5 @@
 .env
+/node_modules
 /nbproject/private/
+/vendor
 /.idea
