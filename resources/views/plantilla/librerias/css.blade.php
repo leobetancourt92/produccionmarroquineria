@@ -55,6 +55,7 @@
     $('#tabla').DataTable({
       responsive: true
     });
+    alert();
   } );
 </script>
 <!-- Select2 -->
