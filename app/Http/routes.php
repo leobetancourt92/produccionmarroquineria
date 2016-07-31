@@ -11,11 +11,18 @@
 |
 */
 
-Route::get('/', 'InicioController@index');
-
-Route::get('home', 'HomeController@index');
 
 Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+	/*Inicio de Session*/
+	'auth'			=>		'Auth\AuthController',
+	'password' 		=> 		'Auth\PasswordController',
+	/*Ingreso al Menu Principal*/
+	'menu' 			=> 		'Menu\MenuController',
+	/*Modulo Administraccion*/
+	'persona'      =>		'Administracion\personaController',
+	'empresa'      =>		'Administracion\personaController',
+	/*Modulo de Produccion*/
+	'talla'			=>		'Produccion\TallaController',
+	'producto'		=>		'Produccion\ProductoController',
+    'color'         =>      'Produccion\ColorController'
 ]);

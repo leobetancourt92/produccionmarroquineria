@@ -135,6 +135,7 @@ return [
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
+		UxWeb\SweetAlert\SweetAlertServiceProvider::class,
 
 		/*
 		 * Application Service Providers...
@@ -159,7 +160,7 @@ return [
 	*/
 
 	'aliases' => [
-
+		'Alert' 	=> UxWeb\SweetAlert\SweetAlert::class,
 		'App'       => 'Illuminate\Support\Facades\App',
 		'Artisan'   => 'Illuminate\Support\Facades\Artisan',
 		'Auth'      => 'Illuminate\Support\Facades\Auth',
