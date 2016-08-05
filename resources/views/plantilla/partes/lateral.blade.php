@@ -99,6 +99,13 @@
                             <li><a href="{{ url('') }}"><i class="fa fa-circle-o"></i> Consultar</a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="#"><i class="fa fa-ticket"></i> Orden de Compra <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ url('') }}"><i class="fa fa-circle-o"></i> Crear</a></li>
+                            <li><a href="{{ url('') }}"><i class="fa fa-circle-o"></i> Consultar</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
             <!-----------Modulo de Usuarios-->
