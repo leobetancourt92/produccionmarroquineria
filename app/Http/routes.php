@@ -11,6 +11,9 @@
 |
 */
 
+Route::get('/', function () {
+	return view('auth.login');
+});
 
 Route::controllers([
 	/*Inicio de Session*/

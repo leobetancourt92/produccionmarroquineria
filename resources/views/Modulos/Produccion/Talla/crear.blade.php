@@ -1,4 +1,4 @@
-@extends('plantilla.estructura')
+@extends('menu.estructura')
 @section('content')
 <div class="row">        
     <div class="col-md-12">
