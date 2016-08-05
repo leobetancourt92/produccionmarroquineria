@@ -60,7 +60,7 @@
                     <li>
                         <a href="#"><i class="fa fa-ticket"></i> Talla <i class="fa fa-angle-left pull-right"></i></a>
                         <ul class="treeview-menu">
-                            <li><a href="{{ url('talla/create') }}"><i class="fa fa-circle-o"></i> Crear</a></li>
+                            <li><a href="{{ url('talla/crear') }}"><i class="fa fa-circle-o"></i> Crear</a></li>
                             <li><a href="{{ url('talla/listar') }}"><i class="fa fa-circle-o"></i> Consultar</a></li>
                         </ul>
                     </li>

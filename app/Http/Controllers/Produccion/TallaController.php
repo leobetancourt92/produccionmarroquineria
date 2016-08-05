@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Redirect;
 
 class TallaController extends Controller {
 
+
     /**
      * Create a new controller instance.
      *
@@ -28,15 +29,57 @@ class TallaController extends Controller {
 
     }
 
-    public function getCreate() {
-
-        return view("Modulos.Produccion.Talla.crear");
+    public function getCrear() {
+        $sql = "SELECT * FROM tipo_producto";
+        $objTipoProductos = \DB::select($sql);
+        
+        return view("Modulos.Produccion.Talla.crear", compact('objTipoProductos'));
+    }
+    public function postCrear() {
+        
+        $datos = \Request::all();
+        $dimencion = $datos['dimension'];
+        $tipoProductoId = $datos['tipo_producto'];
+//        dd($datos);
+         \DB::insert(
+                "INSERT INTO talla "
+                . "( "
+                . " tal_dimension,  "
+                . " tip_pro_id  "
+                . ") "
+                . "VALUES (?,?)", array(
+                    $dimencion,
+                    $tipoProductoId,
+        ));
+        return  \Redirect::to('talla/listar');
+//        return view("Modulos.Produccion.Talla.listar", compact("objTalla"));
     }
 
     public function getListar() {
-
-        return view("Modulos.Layout.partials.content");
+        $objTalla = \DB::select("SELECT * FROM talla");
+        return view("Modulos.Produccion.Talla.listar", compact("objTalla"));
     }
+    public function getEditar($id){
+        $objTalla = \DB::select("SELECT * FROM talla WHERE tal_id = $id");
+         return view("Modulos.Produccion.Talla.editar", compact("objTalla"));
+    }
+    
+    public function postEditar(){
+        $datos = \Request::all();
+        $objTalla = \DB::select("UPDATE talla SET tal_dimension = '".$datos['dimension']."' WHERE tal_id = ".$datos['id']."");
+        return  \Redirect::to('talla/listar');
+    }
+    
+    public function getEliminar($id){
+        $objTalla = \DB::select("SELECT * FROM talla WHERE tal_id = $id");
+         return view("Modulos.Produccion.Talla.eliminar", compact("objTalla"));
+    }
+    public function postEliminar(){
+        $datos = \Request::all();
+        $objTalla = \DB::select("DELETE FROM talla WHERE tal_id = '".$datos['id']."'");
+        return  \Redirect::to('talla/listar');
+    }
+
 
 
 }
