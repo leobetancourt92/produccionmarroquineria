@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AdminTableSeeder' => $baseDir . '/database/seeds/AdminTableSeeder.php',
     'App\\Commands\\Command' => $baseDir . '/app/Commands/Command.php',
     'App\\Console\\Commands\\Inspire' => $baseDir . '/app/Console/Commands/Inspire.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
@@ -15,6 +16,7 @@ return array(
     'App\\Http\\Controllers\\Auth\\AuthController' => $baseDir . '/app/Http/Controllers/Auth/AuthController.php',
     'App\\Http\\Controllers\\Auth\\PasswordController' => $baseDir . '/app/Http/Controllers/Auth/PasswordController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\Inventario\\InventarioController' => $baseDir . '/app/Http/Controllers/Inventario/InventarioController.php',
     'App\\Http\\Controllers\\Menu\\MenuController' => $baseDir . '/app/Http/Controllers/Menu/MenuController.php',
     'App\\Http\\Controllers\\Produccion\\ColorController' => $baseDir . '/app/Http/Controllers/Produccion/ColorController.php',
     'App\\Http\\Controllers\\Produccion\\ProductoController' => $baseDir . '/app/Http/Controllers/Produccion/ProductoController.php',
