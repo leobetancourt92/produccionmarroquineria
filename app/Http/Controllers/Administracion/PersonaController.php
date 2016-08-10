@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Administracion;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
-
-
+use DB;
+use Alert;
 class PersonaController extends Controller {
 
     /**
@@ -34,79 +34,71 @@ class PersonaController extends Controller {
      * @return Response
      */
     public function getCrear() {
+		$sql = "SELECT * FROM ciudad";
+        $objCiudad = \DB::select($sql);
+		
+		$sql = "SELECT * FROM tipo_cliente";
+        $objTipoCliente = \DB::select($sql);
 
-        return view("Modulos.Administracion.persona.crear");
+        return view("Modulos.Administracion.persona.crear", compact('objCiudad','objTipoCliente'));
     }
 
     public function postCrear(Request $request) {
-        $per_id                     = $request->input('per_id');
-        $per_identificacion         = $request->input('per_identificacion');
-        $per_nombres                = $request->input('per_nombres');
-        $per_apellidos              = $request->input('per_apellidos');
+        $per_id                     = "DEFAULT";
         $per_telefono               = $request->input('per_telefono');
         $per_direccion              = $request->input('per_direccion');
-        $per_ciu_id_fk              = $request->input('ciu_id_fk');
+        $per_ciu_id_fk              = $request->input('ciu_id');
         $per_correo                 = $request->input('per_correo');
         $per_fecha_nacimiento       = $request->input('per_fecha_nacimiento');
-        $per_id_tipopersona_fk     = $request->input('per_id_tipopersona_fk');
-
-        DB::insert(
+        $tip_cli_id					= $request->input('tip_cli_id');
+		
+        $sql = DB::insert(
                 "INSERT INTO persona "
                 . "( "
-                . " per_id,  "
-                . " per_identificacion,  "
-                . " per_nombres,   "
-                . " per_apellidos,  "
+                . " per_id, "
                 . " per_telefono, "
                 . " per_direccion, "
-                . " per_ciu_id_fk', "
+                . " per_ciu_id_fk, "
                 . " per_correo, "
                 . " per_fecha_nacimiento, "
-                . " per_id_tipopersona_fk, "
+                . " tip_cli_id "
                 . ") "
-                . "VALUES (?,?,?,?,?,?,?,?,?,?)", array(
-                    $per_id,
-                    $per_identificacion,
-                    $per_nombres,
-                    $per_apellidos,
+                . "VALUES (?,?,?,?,?,?,?)", array(
+                	$per_id,
                     $per_telefono,
                     $per_direccion,
                     $per_ciu_id_fk,
                     $per_correo,
                     $per_fecha_nacimiento,
-                    $per_tipopersona_fk
+                    $tip_cli_id
         ));
-        return view("Modulos.Layout.partials.content");
-
+		if ($sql <> 0):
+	        Alert::success('El Registro Fue Exitoso..!!!')->persistent('Cerrar')->autoclose(3000);
+	        return Redirect::to(url('persona/listar'));
+	    else:
+	    	echo "El Registro No Se Guardo";
+	    endif;
     }
 
-//    public function getListar() {
-//        $identificacion = "";
-//        if (isset($_GET['identificacion'])) {
-//
-//            $identificacion = $_GET['identificacion'];
-//        }
-//        $where = "where 1 = 1";
-//        if (!empty($identificacion)) {
-//            $where = " where per_identificacion = " . $identificacion;
-//        }
-//        $personas = DB::select("SELECT "
-//                        . "per_identificacion, "
-//                        . "per_primer_nombre, "
-//                        . "per_segundo_nombre, "
-//                        . "per_primer_apellido, "
-//                        . "per_segundo_apellido, "
-//                        . "per_telefono,"
-//                        . "per_correo,"
-//                        . "per_genero"
-//                        . " FROM persona "
-//                        . $where
-//        );
-//
-//        return view('personas.listar', compact("personas", "identificacion"));
-//    }
-//
-//    /**
+    public function getListar() {
+       	$sql = "SELECT * FROM tipo_cliente tc
+       			INNER JOIN persona p ON p.tip_cli_id = tc.tip_cli_id
+       			INNER JOIN ciudad c ON c.ciu_id = p.per_ciu_id_fk";
+        $personas = \DB::select($sql);
+
+        return view('Modulos.Administracion.persona.listar', compact("personas"));
+    }
+	public function getVer($per_id){
+
+        $sql = "SELECT * FROM color";
+        $objColor = \DB::select($sql);
+		
+        $sql = "select * from producto where pro_id=$pro_id";
+        $productos = \DB::select($sql);
+        return view("Modulos.Produccion.Productos.show", compact('productos','objColor', 'objTalla'));
+    }
+
+    /**
 //     * Show the form for editing the specified resource.
 //     *
 //     * @param  int  $id
@@ -158,5 +150,6 @@ class PersonaController extends Controller {
 ////    public function destroy($per_identificacion) {
 ////        //
 ////    }
-
+		/*
+		 * */
 }

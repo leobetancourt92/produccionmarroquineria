@@ -36,8 +36,8 @@
                     <li>
                         <a href="#"><i class="fa fa-user"></i> Persona <i class="fa fa-angle-left pull-right"></i></a>
                         <ul class="treeview-menu">
-                            <li><a href="{{ url('persona/crear') }}"><i class="fa fa-circle-o"></i> Crear</a></li>
-                            <li><a href="{{ url('persona/listar') }}"><i class="fa fa-circle-o"></i> Consultar</a></li>
+                            <li><a href="<?php echo e(url('persona/crear')); ?>"><i class="fa fa-circle-o"></i> Crear</a></li>
+                            <li><a href="<?php echo e(url('persona/listar')); ?>"><i class="fa fa-circle-o"></i> Consultar</a></li>
                         </ul>
                     </li>
                     <li>
@@ -60,8 +60,8 @@
                     <li>
                         <a href="#"><i class="fa fa-ticket"></i> Talla <i class="fa fa-angle-left pull-right"></i></a>
                         <ul class="treeview-menu">
-                            <li><a href="{{ url('talla/crear') }}"><i class="fa fa-circle-o"></i> Crear</a></li>
-                            <li><a href="{{ url('talla/listar') }}"><i class="fa fa-circle-o"></i> Consultar</a></li>
+                            <li><a href="<?php echo e(url('talla/crear')); ?>"><i class="fa fa-circle-o"></i> Crear</a></li>
+                            <li><a href="<?php echo e(url('talla/listar')); ?>"><i class="fa fa-circle-o"></i> Consultar</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -69,8 +69,8 @@
                     <li>
                         <a href="#"><i class="fa fa-ticket"></i> Producto <i class="fa fa-angle-left pull-right"></i></a>
                         <ul class="treeview-menu">
-                            <li><a href="{{ url('producto/create') }}"><i class="fa fa-circle-o"></i> Crear</a></li>
-                            <li><a href="{{ url('producto/listar') }}"><i class="fa fa-circle-o"></i> Consultar</a></li>
+                            <li><a href="<?php echo e(url('producto/create')); ?>"><i class="fa fa-circle-o"></i> Crear</a></li>
+                            <li><a href="<?php echo e(url('producto/listar')); ?>"><i class="fa fa-circle-o"></i> Consultar</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -78,8 +78,8 @@
                     <li>
                         <a href="#"><i class="fa fa-cog"></i> Color <i class="fa fa-angle-left pull-right"></i></a>
                         <ul class="treeview-menu">
-                            <li><a href="{{ url('color/create') }}"><i class="fa fa-circle-o"></i> Registrar</a></li>
-                            <li><a href="{{ url('color/listar') }}"><i class="fa fa-circle-o"></i> Consultar</a></li>
+                            <li><a href="<?php echo e(url('color/create')); ?>"><i class="fa fa-circle-o"></i> Registrar</a></li>
+                            <li><a href="<?php echo e(url('color/listar')); ?>"><i class="fa fa-circle-o"></i> Consultar</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -95,15 +95,15 @@
                     <li>
                         <a href="#"><i class="fa fa-ticket"></i> Bodega <i class="fa fa-angle-left pull-right"></i></a>
                         <ul class="treeview-menu">
-                            <li><a href="{{ url('') }}"><i class="fa fa-circle-o"></i> Crear</a></li>
-                            <li><a href="{{ url('') }}"><i class="fa fa-circle-o"></i> Consultar</a></li>
+                            <li><a href="<?php echo e(url('')); ?>"><i class="fa fa-circle-o"></i> Crear</a></li>
+                            <li><a href="<?php echo e(url('')); ?>"><i class="fa fa-circle-o"></i> Consultar</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-ticket"></i> Orden de Compra <i class="fa fa-angle-left pull-right"></i></a>
                         <ul class="treeview-menu">
-                            <li><a href="{{ url('') }}"><i class="fa fa-circle-o"></i> Crear</a></li>
-                            <li><a href="{{ url('') }}"><i class="fa fa-circle-o"></i> Consultar</a></li>
+                            <li><a href="<?php echo e(url('')); ?>"><i class="fa fa-circle-o"></i> Crear</a></li>
+                            <li><a href="<?php echo e(url('')); ?>"><i class="fa fa-circle-o"></i> Consultar</a></li>
                         </ul>
                     </li>
                 </ul>

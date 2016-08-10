@@ -8,10 +8,10 @@
  * @Categoria: ${project_name}
  */
 ?>
-@extends('menu.estructura')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
     <!-- Confirmacion de Desactivar -->
-    <script src="{{ asset('js/Confirmacion.js') }}"></script>
+    <script src="<?php echo e(asset('js/Confirmacion.js')); ?>"></script>
     <!-- Main content -->
     <section class="content">
         <!-- Default box -->
@@ -86,4 +86,5 @@
             </div><!-- /.box-body -->
         </div><!-- /.box-->
     </section>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('menu.estructura', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

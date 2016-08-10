@@ -8,8 +8,8 @@
  * @Categoria: ${project_name}
  */
 ?>
-@extends('menu.estructura')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 
 <div class="box">
     <div class="box-header with-border">
@@ -24,7 +24,7 @@
             <div class="box box-primary">
 
                 <form name="signupForm1" id="signupForm1" class="form-horizontal" method="post" autocomplete="off" action="<?php echo url('persona/crear') ?>">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
                     <div class="box-body">
                         <div class="col-xs-12">
                             <h2 class="page-header">
@@ -137,4 +137,6 @@ function numeros(e){
     }
 
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('menu.estructura', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

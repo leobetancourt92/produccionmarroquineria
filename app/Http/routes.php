@@ -22,8 +22,8 @@ Route::controllers([
 	/*Ingreso al Menu Principal*/
 	'menu' 			=> 		'Menu\MenuController',
 	/*Modulo Administraccion*/
-	'persona'      =>		'Administracion\personaController',
-	'empresa'      =>		'Administracion\personaController',
+	'persona'      =>		'Administracion\PersonaController',
+	//'empresa'      =>		'Administracion\EmpresaController',
 	/*Modulo de Produccion*/
 	'talla'			=>		'Produccion\TallaController',
 	'producto'		=>		'Produccion\ProductoController',
