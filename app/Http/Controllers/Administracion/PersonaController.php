@@ -51,7 +51,8 @@ class PersonaController extends Controller {
         $per_correo                 = $request->input('per_correo');
         $per_fecha_nacimiento       = $request->input('per_fecha_nacimiento');
         $tip_cli_id					= $request->input('tip_cli_id');
-		
+		$per_estado 				= "ACTIVO";
+  		
         $sql = DB::insert(
                 "INSERT INTO persona "
                 . "( "
@@ -61,15 +62,17 @@ class PersonaController extends Controller {
                 . " per_ciu_id_fk, "
                 . " per_correo, "
                 . " per_fecha_nacimiento, "
+                . " per_estado, "
                 . " tip_cli_id "
                 . ") "
-                . "VALUES (?,?,?,?,?,?,?)", array(
+                . "VALUES (?,?,?,?,?,?,?,?)", array(
                 	$per_id,
                     $per_telefono,
                     $per_direccion,
                     $per_ciu_id_fk,
                     $per_correo,
                     $per_fecha_nacimiento,
+                    $per_estado,
                     $tip_cli_id
         ));
 		if ($sql <> 0):
