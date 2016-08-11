@@ -93,66 +93,50 @@ class PersonaController extends Controller {
     }
 	public function getVer($per_id){
 
-        $sql = "SELECT * FROM color";
-        $objColor = \DB::select($sql);
+        $sql = "SELECT * FROM ciudad";
+        $objCiudad = \DB::select($sql);
 		
-        $sql = "select * from producto where pro_id=$pro_id";
-        $productos = \DB::select($sql);
-        return view("Modulos.Produccion.Productos.show", compact('productos','objColor', 'objTalla'));
+		$sql = "SELECT * FROM tipo_cliente";
+        $objTipoCliente = \DB::select($sql);
+		
+        $sql = "select * from persona where per_id=$per_id";
+        $personas = \DB::select($sql);
+        return view("Modulos.Administracion.persona.show", compact('personas','objCiudad','objTipoCliente'));
     }
 
-    /**
-//     * Show the form for editing the specified resource.
-//     *
-//     * @param  int  $id
-//     * @return Response
-//     */
-////    public function getEditar($identificacion) {
-////        $identificacion = User::find(identificacion);
-////        if (is_nul($identificacion)) {
-////            App::abort(404);
-////        }
-////        return view('personas.listar', compact("personas", "identificacion"));
-////    }
-////
-////    /**
-////     * Store a newly created resource in storage.
-////     *
-////     * @return Response
-////     */
-////    public function store() {
-////        //
-////    }
-////
-////    /**
-////     * Display the specified resource.
-////     *
-////     * @param  int  $id
-////     * @return Response
-////     */
-////    public function show($id) {
-////        //
-////    }
-////
-////    /**
-////     * Update the specified resource in storage.
-////     *
-////     * @param  int  $id
-////     * @return Response
-////     */
-////    public function update($per_identificacion) {
-////        //
-////    }
-////
-////    /**
-////     * Remove the specified resource from storage.
-////     *
-////     * @param  int  $id
-////     * @return Response
-////     */
-////    public function destroy($per_identificacion) {
-////        //
-////    }
-		/*
-		 * */
+    public function getEditar($per_id) {
+        $sql = "SELECT * FROM ciudad";
+        $objCiudad = \DB::select($sql);
+
+        $sql = "SELECT * FROM tipo_cliente";
+        $objTipoCliente = \DB::select($sql);
+
+        $sql = "select * from persona where per_id=$per_id";
+        $personas = \DB::select($sql);
+        return view("Modulos.Administracion.persona.editar", compact('personas','objCiudad','objTipoCliente'));
+    }
+	public function postEditar(){
+        $datos = \Request::all();
+        $personas =\DB::select("UPDATE persona SET per_direccion ='{$datos['per_direccion']}',per_telefono='{$datos['per_telefono']}', per_ciu_id_fk='{$datos['per_ciu_id_fk']}', 
+        						per_fecha_nacimiento='{$datos['per_fecha_nacimiento']}', per_correo='{$datos['per_correo']}', tip_cli_id='{$datos['tip_cli_id']}' 
+        						WHERE per_id='".$datos['per_id']."'");
+
+        Alert::success('Persona Actualizada Con exito!')->persistent('Cerrar')->autoclose(3000);
+        
+        return Redirect::to(url('persona/listar'));    
+    }
+    public function getDesactivar($per_id){
+
+        $sql = "UPDATE persona SET per_estado='INACTIVO' WHERE per_id=$per_id";
+        $personas = \DB::select($sql);
+        return Redirect::to(url('persona/listar'));
+    }
+
+    public function getActivar($per_id){
+
+        $sql = "UPDATE persona SET per_estado='ACTIVO' WHERE per_id=$per_id";
+        $personas = \DB::select($sql);
+        return Redirect::to(url('persona/listar'));
+    }
 }
+?>

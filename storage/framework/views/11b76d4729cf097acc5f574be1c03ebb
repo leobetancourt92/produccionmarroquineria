@@ -1,5 +1,4 @@
-@extends('menu.estructura')
-@section('content')
+<?php $__env->startSection('content'); ?>
 <!-- Main content -->
 <section class="content">
     <!-- Default box -->
@@ -21,7 +20,7 @@
                     <form name="signupForm1" id="signupForm1" class="form-horizontal" method="POST" autocomplete="off" action="<?php echo url("persona/editar/")?>">
                         <div class="box-body">
                             <input type="hidden" name="per_id" value="<?php echo $persona->per_id ?>"?>
-                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
                             <div class="col-xs-12">
                                 <h2 class="page-header">
                                     <i class="fa fa-user"></i><font><font>Informacion General
@@ -92,4 +91,5 @@
         </div><!-- /.box-body -->
     </div><!-- /.box-->
 </section>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('menu.estructura', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
