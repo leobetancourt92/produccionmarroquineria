@@ -1,7 +1,5 @@
 @extends('menu.estructura')
 @section('content')
-    <!-- Confirmacion de Desactivar -->
-    <script src="{{ asset('js/Confirmacion.js') }}"></script>
     <!-- Main content -->
     <section class="content">
         <!-- Default box -->
@@ -21,19 +19,20 @@
                             <h3 class="box-title">Listado de Tallas</h3>
                         </div><!-- /.box-header -->
                         <div class="box-success">
+
                             <div class="table-responsive">
                                 <table id="tabla" class="table table-bordered table-striped">
                                     <thead>
-                                    <tr>
-                                        <td>No</td>
-                                        <td>Descripcion</td>
-                                        <td>Color</td>
-                                        <td>Talla</td>
-                                        <td>Cantidad</td>
-                                        <td>Costo</td>
-                                        <td>Estado</td>
-                                        <td>Acciones</td>
-                                    </tr>
+                                        <tr>
+                                            <td>No</td>
+                                            <td>Descripcion</td>
+                                            <td>Color</td>
+                                            <td>Talla</td>
+                                            <td>Cantidad</td>
+                                            <td>Costo</td>
+                                            <td>Estado</td>
+                                            <td>Acciones</td>
+                                        </tr>
                                     </thead>
                                     <tbody>
                                     <?php foreach($productos as $producto){?>

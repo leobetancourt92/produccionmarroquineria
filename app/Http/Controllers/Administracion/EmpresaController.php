@@ -25,8 +25,8 @@ class EmpresaController extends Controller {
     public function getCrear() {
         $sql = "SELECT * FROM ciudad";
         $objCiudad = \DB::select($sql);
-		
-		$sql = "SELECT * FROM tipo_cliente";
+        
+        $sql = "SELECT * FROM tipo_cliente";
         $objTipoCliente = \DB::select($sql);
 
         return view("Modulos.Administracion.empresa.crear",compact('objCiudad','objTipoCliente'));
@@ -34,15 +34,15 @@ class EmpresaController extends Controller {
 
     public function postCrear(Request $request) {
 
-        $emp_Nit 			= $request->input('emp_Nit');
-        $emp_razon_social 	= $request->input('emp_razon_social');
-        $emp_telefono 		= $request->input('emp_telefono');
-        $emp_direccion 		= $request->input('emp_direccion');
-        $ciu_id 			= $request->input('ciu_id');
-        $emp_contacto 		= $request->input('emp_contacto');
-        $emp_correo 		= $request->input('emp_correo');
-		$tip_cli_id 		= $request->input('tip_cli_id');
-		
+        $emp_Nit            = $request->input('emp_Nit');
+        $emp_razon_social   = $request->input('emp_razon_social');
+        $emp_telefono       = $request->input('emp_telefono');
+        $emp_direccion      = $request->input('emp_direccion');
+        $ciu_id             = $request->input('ciu_id');
+        $emp_contacto       = $request->input('emp_contacto');
+        $emp_correo         = $request->input('emp_correo');
+        $tip_cli_id         = $request->input('tip_cli_id');
+        
         $sql = DB::insert(
                 "INSERT INTO empresa "
                 . "( "
@@ -67,13 +67,13 @@ class EmpresaController extends Controller {
             $emp_contacto,
             $tip_cli_id
         ));
-		
+        
         if ($sql <> 0):
-	        Alert::success('El Registro Fue Exitoso..!!!')->persistent('Cerrar')->autoclose(3000);
-	        return Redirect::to(url('empresa/listar'));
-	    else:
-	    	echo "El Registro No Se Guardo";
-	    endif;
+            Alert::success('El Registro Fue Exitoso..!!!')->persistent('Cerrar')->autoclose(3000);
+            return Redirect::to(url('empresa/listar'));
+        else:
+            echo "El Registro No Se Guardo";
+        endif;
     }
 
 
@@ -114,9 +114,9 @@ class EmpresaController extends Controller {
         if (is_null($nit)) {
             App::abort(404);
         }
-		$sql = "SELECT * FROM ciudad";
+        $sql = "SELECT * FROM ciudad";
         $objCiudad = \DB::select($sql);
-		
+        
         $empresas = DB::select("SELECT * FROM empresa WHERE emp_nit={$nit}");
         return view('Modulos.Administracion.empresa.editar', compact("empresas","objCiudad"));
     }
