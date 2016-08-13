@@ -125,14 +125,6 @@ trait AuthenticatesAndRegistersUsers {
 		return property_exists($this, 'redirectTo') ? $this->redirectTo : 'menu/index';
 	}
 
-	/**
-	 * Get the path to the login route.
-	 *
-	 * @return string
-	 */
-	public function loginPath()
-	{
-		return property_exists($this, 'loginPath') ? $this->loginPath : 'auth/login';
-	}
+
 
 }

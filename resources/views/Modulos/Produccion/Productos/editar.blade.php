@@ -46,7 +46,6 @@
                             <div class="col-lg-6 form-group">
                                 <label class="col-sm-3 control-label" for="talla">Talla</label>
                                 <div class="col-lg-9">
-<!--                                    <select class="form-control select2-single" id="talla" name="talla">-->
                                     <select class="form-control select2-single"   id="talla" name="talla">
 
                                         <option>Selecciona Talla</option>

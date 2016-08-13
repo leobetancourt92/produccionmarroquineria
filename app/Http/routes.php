@@ -11,21 +11,26 @@
 |
 */
 
+
+
 Route::get('/', function () {
 	return view('auth.login');
 });
 
 Route::controllers([
 	/*Inicio de Session*/
-	'auth'			=>		'Auth\AuthController',
-	'password' 		=> 		'Auth\PasswordController',
+		'auth'			=>		'Auth\AuthController',
+		'password' 		=> 		'Auth\PasswordController',
 	/*Ingreso al Menu Principal*/
-	'menu' 			=> 		'Menu\MenuController',
+		'menu' 			=> 		'Menu\MenuController',
 	/*Modulo Administraccion*/
-	'persona'      =>		'Administracion\personaController',
-	'empresa'      =>		'Administracion\personaController',
+		'persona'      =>		'Administracion\PersonaController',
+		'empresa'      =>		'Administracion\EmpresaController',
 	/*Modulo de Produccion*/
-	'talla'			=>		'Produccion\TallaController',
-	'producto'		=>		'Produccion\ProductoController',
-    'color'         =>      'Produccion\ColorController'
+		'talla'			=>		'Produccion\TallaController',
+		'producto'		=>		'Produccion\ProductoController',
+		'tipo'          =>      'Produccion\TipoProductoController',
+	/*Modulo de Produccion*/
+		'inventario'         => 'Inventario\InventarioController'
+
 ]);
