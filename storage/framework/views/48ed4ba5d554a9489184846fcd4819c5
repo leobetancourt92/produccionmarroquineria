@@ -1,0 +1,90 @@
+<?php $__env->startSection('content'); ?>
+<!-- Main content -->
+<section class="content">
+    <!-- Default box -->
+    <div class="box">
+        <div class="box-header with-border">
+            <center> <h3 class="box-title"><i class="fa fa-users fa-2x"></i>Ver Persona</h3></center>
+            <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="col-md-12">
+                <!-- general form elements -->
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <h3 class="box-title"></h3>
+                    </div><!-- /.box-header -->
+
+                    <form name="signupForm1" id="signupForm1" class="form-horizontal" method="post" autocomplete="off" action="<?php echo url('persona/crear') ?>"  >
+                        <div class="box-body">
+                            <?php foreach($personas as $persona){?>
+                            <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
+                            <div class="col-xs-12">
+                                <h2 class="page-header">
+                                    <i class="fa fa-user"></i><font><font>Informacion General
+                                </h2>
+                            </div>
+                            <div class="col-lg-6 form-group">
+                                <label class="col-sm-3 control-label" for="per_direccion">Descripcion</label>
+                                <div class="col-xs-9">
+                                    <input type="text" class="form-control" id="per_direccion" name="per_direccion" value="<?php echo $persona->per_direccion ?>" disabled>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 form-group">
+                                <label class="col-sm-3 control-label" for="per_telefono">Telefono</label>
+                                <div class="col-xs-9">
+                                    <input type="text" class="form-control" id="per_telefono" name="per_telefono" value="<?php echo $persona->per_telefono ?>" disabled>
+                                </div>
+                            </div>
+							<div class="col-lg-6 form-group">
+	                            <label class="col-sm-3 control-label" for="ciu_id">Ciudad</label>
+	                            <div class="col-sm-9">
+	                                <select class="form-control Select2-single" name="ciu_id" id="ciu_id">
+	                                    <option>Selecciona Ciudad</option>
+	                                    <?php foreach ($objCiudad as $Ciudad):
+	                                       if($persona->per_ciu_id_fk == $Ciudad->ciu_id):?>
+                                                <option value="<?php echo $Ciudad->ciu_id?>" selected disabled><?php echo $Ciudad->ciu_nombre ?></option>
+                                            <?php else: ?>
+                                                <option value="<?php echo $Ciudad->ciu_id?>" disabled><?php echo $Ciudad->ciu_nombre ?></option>
+                                            <?php endif; endforeach;?>
+	                                </select>
+	                            </div>
+	                        </div>
+	                        <div class="col-lg-6 form-group">
+                                <label class="col-sm-3 control-label" for="per_fecha_nacimiento">Fecha De Nacimiento</label>
+                                <div class="col-xs-9">
+                                    <input type="date" class="form-control" id="per_fecha_nacimiento" name="per_fecha_nacimiento" value="<?php echo $persona->per_fecha_nacimiento ?>" disabled>
+                                </div>
+                            </div>
+	                        <div class="col-lg-6 form-group">
+                                <label class="col-sm-3 control-label" for="per_correo">Correo</label>
+                                <div class="col-xs-9">
+                                    <input type="text" class="form-control" id="per_correo" name="per_correo" value="<?php echo $persona->per_correo ?>" disabled>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 form-group">
+	                            <label class="col-sm-3 control-label" for="tip_cli_id">Tipo Cliente</label>
+	                            <div class="col-sm-9">
+	                                <select class="form-control Select2-single" name="tip_cli_id" id="tip_cli_id">
+	                                    <option>Selecciona Tipo de Cliente</option>
+	                                    <?php foreach ($objTipoCliente as $tipocliente):
+	                                       if($tipocliente->tip_cli_id == $persona->tip_cli_id):?>
+                                                <option value="<?php echo $tipocliente->tip_cli_id;?>" selected disabled><?php echo $tipocliente->tip_nombres." ".$tipocliente->tip_apellidos ;?></option>
+                                            <?php else: ?>
+                                                <option value="<?php echo $tipocliente->tip_cli_id?>" disabled><?php echo $tipocliente->tip_nombres." ".$tipocliente->tip_apellidos ; ?></option>
+                                            <?php endif; endforeach;?>
+	                                </select>
+	                            </div>
+	                        </div>
+                        </div>
+                        <?php }?>
+                    </form><!-- /.form-->
+                </div><!-- /.box box-primary -->
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.box-body -->
+    </div><!-- /.box-->
+</section>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('menu.estructura', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

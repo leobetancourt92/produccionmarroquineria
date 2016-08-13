@@ -24,8 +24,13 @@ Route::controllers([
 	/*Ingreso al Menu Principal*/
 		'menu' 			=> 		'Menu\MenuController',
 	/*Modulo Administraccion*/
+<<<<<<< HEAD
 		'persona'      =>		'Administracion\PersonaController',
 		'empresa'      =>		'Administracion\EmpresaController',
+=======
+	'persona'      =>		'Administracion\PersonaController',
+	//'empresa'      =>		'Administracion\EmpresaController',
+>>>>>>> origin/master
 	/*Modulo de Produccion*/
 		'talla'			=>		'Produccion\TallaController',
 		'producto'		=>		'Produccion\ProductoController',
