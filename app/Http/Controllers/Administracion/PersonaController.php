@@ -17,17 +17,6 @@ class PersonaController extends Controller {
     public function __construct() {
         //$this->middleware('auth');
     }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Response
-     */
-    public function getIndex()
-    {
-        return view("plantilla.estructura");
-    }
-
     /**
      * Show the form for creating a new resource.
      *

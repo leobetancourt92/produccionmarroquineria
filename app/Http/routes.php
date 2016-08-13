@@ -23,7 +23,7 @@ Route::controllers([
 	'menu' 			=> 		'Menu\MenuController',
 	/*Modulo Administraccion*/
 	'persona'      =>		'Administracion\PersonaController',
-	//'empresa'      =>		'Administracion\EmpresaController',
+	'empresa'      =>		'Administracion\EmpresaController',
 	/*Modulo de Produccion*/
 	'talla'			=>		'Produccion\TallaController',
 	'producto'		=>		'Produccion\ProductoController',

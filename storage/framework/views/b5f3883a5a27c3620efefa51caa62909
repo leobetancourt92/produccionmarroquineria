@@ -1,5 +1,4 @@
-@extends('menu.estructura')
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <!-- Default box -->
 <div class="box">
@@ -99,4 +98,5 @@
     </div><!-- /.box-body -->
 </div><!-- /.box-->
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('menu.estructura', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

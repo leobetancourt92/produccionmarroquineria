@@ -43,8 +43,8 @@
                     <li>
                         <a href="#"><i class="fa fa-cog"></i> Empresa <i class="fa fa-angle-left pull-right"></i></a>
                         <ul class="treeview-menu">
-                            <li><a href=""><i class="fa fa-circle-o"></i> Crear</a></li>
-                            <li><a href=""><i class="fa fa-circle-o"></i> Consultar</a></li>
+                            <li><a href="{{ url('empresa/crear') }}"><i class="fa fa-circle-o"></i> Crear</a></li>
+                            <li><a href="{{ url('empresa/crear') }}"><i class="fa fa-circle-o"></i> Consultar</a></li>
                         </ul>
                     </li>
                 </ul>
