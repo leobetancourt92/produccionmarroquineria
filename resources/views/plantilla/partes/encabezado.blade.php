@@ -53,7 +53,7 @@
               <a href="#" class="btn btn-default btn-flat">Perfil</a>
             </div>
             <div class="pull-right">
-              <a href="{{ url('/auth/login') }}" class="btn btn-default btn-flat">Cerrar Session</a>
+              <a href="{{ url('/auth/logout') }}" class="btn btn-default btn-flat">Cerrar Session</a>
             </div>
           </li>
         </ul>

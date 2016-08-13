@@ -16,6 +16,7 @@
 Route::get('/', function () {
 	return view('auth.login');
 });
+Route::get('home', 'FrontEndController@index');
 
 Route::controllers([
 	/*Inicio de Session*/
