@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-08-2016 a las 05:44:01
+-- Tiempo de generación: 13-08-2016 a las 22:56:12
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.6.15
 
@@ -31,6 +31,25 @@ CREATE TABLE `bodega` (
   `pro_id` int(11) NOT NULL,
   `bod_total` varchar(45) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ciudad`
+--
+
+CREATE TABLE `ciudad` (
+  `ciu_id` int(11) NOT NULL,
+  `ciu_nombre` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `ciudad`
+--
+
+INSERT INTO `ciudad` (`ciu_id`, `ciu_nombre`) VALUES
+(1, 'Cali'),
+(2, 'Bogotá');
 
 -- --------------------------------------------------------
 
@@ -140,8 +159,16 @@ CREATE TABLE `persona` (
   `per_correo` varchar(60) DEFAULT NULL,
   `per_fecha_nacimiento` date DEFAULT NULL,
   `per_estado` varchar(45) DEFAULT NULL,
-  `tip_cli_id` int(11) NOT NULL
+  `tip_cli_id` int(11) NOT NULL,
+  `per_ciu_id_fk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `persona`
+--
+
+INSERT INTO `persona` (`per_id`, `per_telefono`, `per_direccion`, `per_correo`, `per_fecha_nacimiento`, `per_estado`, `tip_cli_id`, `per_ciu_id_fk`) VALUES
+(1, '889909', 'CALLE 93 67', 'AFGARCIASRNA@GMAIL.COM', '2016-12-31', 'ACTIVO', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -200,6 +227,13 @@ CREATE TABLE `tipo_cliente` (
   `tip_apellidos` varchar(45) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `tipo_cliente`
+--
+
+INSERT INTO `tipo_cliente` (`tip_cli_id`, `tip_identificacion`, `tip_nombres`, `tip_apellidos`) VALUES
+(1, 123, 'No funciona', 'Por luis');
+
 -- --------------------------------------------------------
 
 --
@@ -241,7 +275,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'DEMO', 'SENA', 'demo@sena.com', 'e10adc3949ba59abbe56e057f20f883e', NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+(1, 'DEMO', 'SENA', 'demo@sena.com', 'e10adc3949ba59abbe56e057f20f883e', NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(2, 'Andres', 'Garcia', 'afgarciaserna@gmail.com', '$2y$10$3DEW.oWl8x8tG/h9a8S63OxDSEjMhyl.Z1DZn3KybztVc5LutlOEW', 'aWEzYuC1T201E9ruVXK8LTMUX7G68KLiNIKSPpVGWG3zcn4idUHYcEpc2EZh', '2016-08-14 01:31:39', '2016-08-14 01:40:15');
 
 --
 -- Índices para tablas volcadas
@@ -253,6 +288,12 @@ INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `email`, `password`, `rememb
 ALTER TABLE `bodega`
   ADD PRIMARY KEY (`bod_id`),
   ADD KEY `fk_bodega_producto1_idx` (`pro_id`);
+
+--
+-- Indices de la tabla `ciudad`
+--
+ALTER TABLE `ciudad`
+  ADD PRIMARY KEY (`ciu_id`);
 
 --
 -- Indices de la tabla `color`
@@ -340,6 +381,11 @@ ALTER TABLE `usuarios`
 ALTER TABLE `bodega`
   MODIFY `bod_id` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT de la tabla `ciudad`
+--
+ALTER TABLE `ciudad`
+  MODIFY `ciu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT de la tabla `color`
 --
 ALTER TABLE `color`
@@ -358,7 +404,7 @@ ALTER TABLE `orden_de_compra`
 -- AUTO_INCREMENT de la tabla `persona`
 --
 ALTER TABLE `persona`
-  MODIFY `per_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `per_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `producto`
 --
@@ -373,7 +419,7 @@ ALTER TABLE `talla`
 -- AUTO_INCREMENT de la tabla `tipo_cliente`
 --
 ALTER TABLE `tipo_cliente`
-  MODIFY `tip_cli_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `tip_cli_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `tipo_producto`
 --
@@ -383,7 +429,7 @@ ALTER TABLE `tipo_producto`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
