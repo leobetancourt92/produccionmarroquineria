@@ -60,24 +60,15 @@
                                 </div>
                             </div>
 
-<!--                            <div class="col-lg-6 form-group" >-->
-<!--                                <label class="col-sm-3 control-label" for="color">Color</label>-->
-<!--                                <div class="col-lg-9">-->
-<!--                                    <select class="form-control js-example-basic-single" id="color" name="color">-->
-<!--                                        <option>Selecciona Color</option>-->
-<!--                                        --><?php //foreach ($objColor as $color){?>
-<!--                                           <option value="--><?php //echo $color->col_id?><!--">--><?php //echo $color->col_descripcion ?><!--</option>-->
-<!--                                        --><?php //}?>
-<!--                                    </select>-->
-<!--                                </div>-->
-<!--                            </div>-->
-                            <div class="col-lg-6 form-group">
+                            <div class="col-lg-6 form-group" >
                                 <label class="col-sm-3 control-label" for="color">Color</label>
-
                                 <div class="col-lg-9">
-                                    <div class="example-content-widget">
-                                        <input type="text" data-format="hex" class="form-control" id="cp8" value=""/>
-                                    </div>
+                                    <select class="form-control js-example-basic-single" id="color" name="color">
+                                        <option>Selecciona Color</option>
+                                        <?php foreach ($objColor as $color){?>
+                                           <option value="<?php echo $color->col_id?>"><?php echo $color->col_descripcion ?></option>
+                                        <?php }?>
+                                    </select>
                                 </div>
                             </div>
 

@@ -59,7 +59,7 @@
                         </div>
 
                         <div class="box-footer">
-                            <button type="submit" class="btn btn-primary" >Registrar</button>
+                            <button type="submit" class="btn btn-primary" >Editar</button>
                         </div>
                         <?php }?>
 

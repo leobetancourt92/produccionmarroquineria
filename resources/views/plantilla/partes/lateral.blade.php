@@ -118,8 +118,8 @@
                 </a>
                 <ul class="treeview-menu">
                     <li>
-                        <li><a href="<?php echo url('produccion/create') ?>"><i class="fa fa-circle-o"></i> Crear</a></li>
-                        <li><a href="#"><i class="fa fa-circle-o"></i> Consultar</a></li>
+                        <li><a href="<?php echo url('usuario/crear') ?>"><i class="fa fa-circle-o"></i> Crear</a></li>
+                        <li><a href="<?php echo url('usuario/listar') ?>"><i class="fa fa-circle-o"></i> Consultar</a></li>
                     </li>
                 </ul>
             </li>

@@ -16,23 +16,24 @@
 Route::get('/', function () {
 	return view('auth.login');
 });
+//Route::get('/', 'FrontEndController@index');
 Route::get('home', 'FrontEndController@index');
 
 Route::controllers([
-	/*Inicio de Session*/
-		'auth'			=>		'Auth\AuthController',
-		'password' 		=> 		'Auth\PasswordController',
-	/*Ingreso al Menu Principal*/
-		'menu' 			=> 		'Menu\MenuController',
-	/*Modulo Administraccion*/
-
-		'persona'      =>		'Administracion\PersonaController',
-		'empresa'      =>		'Administracion\EmpresaController',
-
-		'talla'			=>		'Produccion\TallaController',
-		'producto'		=>		'Produccion\ProductoController',
-		'tipo'          =>      'Produccion\TipoProductoController',
-	/*Modulo de Produccion*/
-		'inventario'         => 'Inventario\InventarioController'
+    /*Inicio de Session*/
+        'auth'			=>		'Auth\AuthController',
+        'password' 		=> 		'Auth\PasswordController',
+    /*Ingreso al Menu Principal*/
+        'menu' 			=> 		'Menu\MenuController',
+    /*Modulo Administraccion*/
+        'persona'      =>		'Administracion\PersonaController',
+        'empresa'      =>		'Administracion\EmpresaController',
+    /*Modulo de Produccion*/
+        'talla'			=>		'Produccion\TallaController',
+        'producto'		=>		'Produccion\ProductoController',
+        'tipo'          =>      'Produccion\TipoProductoController',
+        'inventario'         => 'Inventario\InventarioController',
+    /*Modulo de Usuarios*/
+        'usuario'=> 'Usuarios\UsuariosController'    
 
 ]);

@@ -85,6 +85,18 @@ class TallaController extends Controller {
         return  \Redirect::to('talla/listar');
     }
 
+    public function getDesactivar($id){
 
+            $sql = "update talla set tal_estado=0 where tal_id=$id";
+            $productos = \DB::select($sql);
+            return Redirect::to(url('talla/listar'));
+        }
+
+        public function getActivar($id){
+
+            $sql = "update talla set tal_estado=1 where tal_id=$id";
+            $productos = \DB::select($sql);
+            return Redirect::to(url('talla/listar'));
+        }
 
 }
