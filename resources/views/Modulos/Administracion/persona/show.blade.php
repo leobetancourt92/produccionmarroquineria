@@ -45,7 +45,7 @@
 	                                <select class="form-control Select2-single" name="ciu_id" id="ciu_id">
 	                                    <option>Selecciona Ciudad</option>
 	                                    <?php foreach ($objCiudad as $Ciudad):
-	                                       if($persona->per_ciu_id_fk == $Ciudad->ciu_id):?>
+	                                       if($persona->ciu_id == $Ciudad->ciu_id):?>
                                                 <option value="<?php echo $Ciudad->ciu_id?>" selected disabled><?php echo $Ciudad->ciu_nombre ?></option>
                                             <?php else: ?>
                                                 <option value="<?php echo $Ciudad->ciu_id?>" disabled><?php echo $Ciudad->ciu_nombre ?></option>
@@ -72,9 +72,9 @@
 	                                    <option>Selecciona Tipo de Cliente</option>
 	                                    <?php foreach ($objTipoCliente as $tipocliente):
 	                                       if($tipocliente->tip_cli_id == $persona->tip_cli_id):?>
-                                                <option value="<?php echo $tipocliente->tip_cli_id;?>" selected disabled><?php echo $tipocliente->tip_nombres." ".$tipocliente->tip_apellidos ;?></option>
+                                                <option value="<?php echo $tipocliente->tip_cli_id;?>" selected disabled><?php echo $tipocliente->tip_cli_descripcion ?></option>
                                             <?php else: ?>
-                                                <option value="<?php echo $tipocliente->tip_cli_id?>" disabled><?php echo $tipocliente->tip_nombres." ".$tipocliente->tip_apellidos ; ?></option>
+                                                <option value="<?php echo $tipocliente->tip_cli_id?>" disabled><?php echo $tipocliente->tip_cli_descripcion ?></option>
                                             <?php endif; endforeach;?>
 	                                </select>
 	                            </div>

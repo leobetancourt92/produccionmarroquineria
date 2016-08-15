@@ -4,7 +4,7 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="<?php echo url("img/SENA.jpg")?>" class="img-circle" alt="User Image">
+                <img src="<?php echo url("img/sena.jpg")?>" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
                 <p><?php echo $nombre = Auth::user()->nombre; ?></p>

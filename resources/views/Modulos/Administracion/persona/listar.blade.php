@@ -17,9 +17,6 @@
                 <div class="col-md-12">
                     <!-- general form elements -->
                     <div class="box box-primary">
-                        <div class="box-header">
-                            <h3 class="box-title">Listado de Tallas</h3>
-                        </div><!-- /.box-header -->
                         <div class="box-success">
                             <div class="table-responsive">
                                 <table id="tabla" class="table table-bordered table-striped">
@@ -39,9 +36,9 @@
                                     <?php 
                                     foreach ($personas as $persona) { ?>
                                         <tr>
-                                            <td><?php echo $persona->tip_identificacion ?></td>
-                                            <td><?php echo $persona->tip_nombres ?></td>                                        
-                                            <td><?php echo $persona->tip_apellidos ?></td>
+                                            <td><?php echo $persona->per_identificacion ?></td>
+                                            <td><?php echo $persona->per_nombres ?></td>                                        
+                                            <td><?php echo $persona->per_apellidos ?></td>
                                             <td><?php echo $persona->per_direccion ?></td>
                                             <td><?php echo $persona->per_telefono ?></td>
                                             <td><?php echo $persona->per_correo ?></td>

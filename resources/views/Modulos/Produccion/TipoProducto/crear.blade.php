@@ -22,13 +22,6 @@
                     <form name="formularios" id="formularios"  class="form-horizontal" method="post" autocomplete="off" action="<?php echo url("tipo/crear") ?>">
                         <div class="box-body">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-                            <div class="col-xs-12">
-                                <h2 class="page-header">
-                                    <i class="fa fa-user"></i><font><font>Informacion General
-                                </h2>
-                            </div>
-
                             <div class="col-lg-6 form-group">
                                 <label class="col-sm-3 control-label" for="descripcion">Descripcion</label>
 

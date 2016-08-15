@@ -17,11 +17,6 @@
                 <form name="signupForm1" id="signupForm1" class="form-horizontal" method="post" autocomplete="off" action="<?php echo url ('empresa/crear')?>">
                     <input type="hidden" name="_token" value="<?php echo csrf_token() ?>">
                     <div class="box-body">
-                        <div class="col-xs-12">
-                            <h2 class="page-header">
-                                <i class=""></i><font><font>Información General
-                            </h2>
-                        </div>
                         <div class="col-lg-6 form-group">
                             <label class="col-sm-3 control-label" for="emp_id">Código</label>
                             <div class="col-xs-9">
@@ -81,7 +76,7 @@
                                 <select class="form-control Select2-single" name="tip_cli_id" id="tip_cli_id">
                                     <option>Selecciona Tipo Cliente</option>
                                     <?php foreach ($objTipoCliente as $TipoCliente){?>
-                                       <option value="<?php echo $TipoCliente->tip_cli_id?>"><?php echo $TipoCliente->tip_nombres." ".$TipoCliente->tip_apellidos ;?></option>
+                                       <option value="<?php echo $TipoCliente->tip_cli_id?>"><?php echo $TipoCliente->tip_cli_descripcion ;?></option>
                                     <?php }?>
                                 </select>
                             </div>

@@ -6,13 +6,6 @@
     <section class="content">
         <!-- Default box -->
         <div class="box">
-            <div class="box-header with-border">
-                <center><h3 class="box-title"> Listado de Tallas</h3></center>
-                <div class="box-tools pull-right">
-                    <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i
-                                class="fa fa-minus"></i></button>
-                </div>
-            </div>
             <div class="box-body">
                 <div class="col-md-12">
                     <!-- general form elements -->

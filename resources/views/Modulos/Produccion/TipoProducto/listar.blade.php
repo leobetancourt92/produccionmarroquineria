@@ -15,9 +15,6 @@
             <div class="col-md-12">
                 <!-- general form elements -->
                 <div class="box box-primary">
-                    <div class="box-header">
-                        <h3 class="box-title">Tipos Productos</h3>
-                    </div><!-- /.box-header -->
                     <div class="box-success">
                         <div class="table-responsive">
                             <table id="tabla" class="table table-bordered table-striped">
