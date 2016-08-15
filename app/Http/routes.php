@@ -19,6 +19,7 @@ Route::get('/', function () {
 //Route::get('/', 'FrontEndController@index');
 Route::get('home', 'FrontEndController@index');
 
+
 Route::controllers([
     /*Inicio de Session*/
         'auth'			=>		'Auth\AuthController',
