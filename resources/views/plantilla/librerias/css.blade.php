@@ -1,13 +1,3 @@
-<?php
-/**
- * @Nombre: ${user}Luis Fernando Angulo Palacios
- * @Fecha:  12/06/2016
- * @Hora:  02:07 PM
- * @Año:   ${year}
- * @Categoria: ${project_name}
- */
-
-?>
 <meta content="text/html" http-equiv="content-type" charset="UTF-8"  >
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Produccion | Marroquineria</title>
@@ -19,13 +9,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 <!-- Ionicons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-
+<!-- DataTablesResponsive -->
 <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.1.0/css/responsive.bootstrap.min.css">
-
+<!-- DataTablesResponsive -->
 <script src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
-
-<script src="https://cdn.datatables.net/responsive/2.1.0/js/responsive.bootstrap.min.js"></script>
-
 <!-- jvectormap -->
 <link rel="stylesheet" href="{{ asset ('plugins/jvectormap/jquery-jvectormap-1.2.2.css')}}">
 <!-- Theme style -->
@@ -49,7 +36,9 @@
 <!-- Select2 full -->
 <script src="{{ asset('plugins/select2/select2.full.js') }}" type="text/javascript"></script>
 <!-- iCheck -->
-
+<link href="{{ asset('css/bootstrap-colorpicker.min.css') }}" rel="stylesheet">
+<!-- Confirmacion de Desactivar -->
+<script src="{{ asset('js/Confirmacion.js') }}"></script>
 <script>
   $(document).ready(function() {
     $('#tabla').DataTable({
@@ -63,7 +52,21 @@
     theme: "bootstrap"
   });
 </script>
-
+<!--ColorPicker-->
+<script>
+  $(function () {
+    $('#cp8').colorpicker({
+      colorSelectors: {
+        'default': '#777777',
+        'primary': '#337ab7',
+        'success': '#5cb85c',
+        'info': '#5bc0de',
+        'warning': '#f0ad4e',
+        'danger': '#d9534f'
+      }
+    });
+  });
+</script>
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

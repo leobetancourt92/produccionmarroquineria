@@ -46,7 +46,7 @@
                         <div class="col-lg-6 form-group">
                             <label class="col-sm-3 control-label" for="ciu_id">Ciudad</label>
                             <div class="col-sm-9">
-                                <select class="Select2-single form-control" name="ciu_id" id="ciu_id" placeholder="Ciudad">
+                                <select class="form-control Select2-single" name="ciu_id" id="ciu_id" placeholder="Ciudad">
                                     <option>Selecciona Ciudad</option>
                                     <?php foreach ($objCiudad as $Ciudad){?>
                                        <option value="<?php echo $Ciudad->ciu_id?>"><?php echo $Ciudad->ciu_nombre ?></option>

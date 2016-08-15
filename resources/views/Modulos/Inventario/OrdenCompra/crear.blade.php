@@ -1,19 +1,13 @@
-<?php
-/**
- * @Nombre: Luis Fernando Angulo Palacios
- * @Fecha:  03/08/2016
- * @Hora:  11:33 PM
- * @Categoria: crear.blade.php
- */
-?>
-        <!-- Main content -->
-        <section class="invoice">
+@extends('menu.estructura')
+@section('content')
+<!-- Main content -->
+    <section class="invoice">
             <!-- title row -->
             <div class="row">
                 <div class="col-xs-12">
                     <h2 class="page-header">
-                        <i class="fa fa-globe"></i> AdminLTE, Inc.
-                        <small class="pull-right">Date: 2/10/2014</small>
+                        <i class="fa fa-globe"></i> Orden de Compra
+                        <small class="pull-right">Fecha: 2/10/2014</small>
                     </h2>
                 </div>
                 <!-- /.col -->
@@ -21,7 +15,7 @@
             <!-- info row -->
             <div class="row invoice-info">
                 <div class="col-sm-4 invoice-col">
-                    From
+                    Usuario
                     <address>
                         <strong>Admin, Inc.</strong><br>
                         795 Folsom Ave, Suite 600<br>
@@ -32,7 +26,7 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-4 invoice-col">
-                    To
+                    Cliente
                     <address>
                         <strong>John Doe</strong><br>
                         795 Folsom Ave, Suite 600<br>
@@ -43,11 +37,10 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-4 invoice-col">
-                    <b>Invoice #007612</b><br>
+                    <b>Numero de Orden: 007612</b><br>
                     <br>
-                    <b>Order ID:</b> 4F3S8J<br>
-                    <b>Payment Due:</b> 2/22/2014<br>
-                    <b>Account:</b> 968-34567
+                    <b>Orden ID:</b> 4F3S8J<br>
+                    <b>Fecha:</b> 2/22/2014<br>
                 </div>
                 <!-- /.col -->
             </div>
@@ -105,16 +98,9 @@
             <div class="row">
                 <!-- accepted payments column -->
                 <div class="col-xs-6">
-                    <p class="lead">Payment Methods:</p>
-                    <img src="../../dist/img/credit/visa.png" alt="Visa">
-                    <img src="../../dist/img/credit/mastercard.png" alt="Mastercard">
-                    <img src="../../dist/img/credit/american-express.png" alt="American Express">
-                    <img src="../../dist/img/credit/paypal2.png" alt="Paypal">
 
-                    <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
-                        Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg
-                        dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
-                    </p>
+
+                   
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-6">
@@ -157,5 +143,6 @@
                 </div>
             </div>
         </section>
-        <!-- /.content -->
+     <!-- /.content -->
         <div class="clearfix"></div>
+@endsection

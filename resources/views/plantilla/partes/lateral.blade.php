@@ -7,7 +7,7 @@
                 <img src="<?php echo url("img/SENA.jpg")?>" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>Alexander Pierce</p>
+                <p><?php echo $nombre = Auth::user()->nombre; ?></p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
@@ -24,7 +24,7 @@
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
-            <li class="header">MAIN NAVIGATION</li>
+            <li class="header">Navegaci&oacute;n</li>
             <!-----------Modulo de Administracion-->
             <li class="treeview">
                 <a href="#">
@@ -43,8 +43,9 @@
                     <li>
                         <a href="#"><i class="fa fa-cog"></i> Empresa <i class="fa fa-angle-left pull-right"></i></a>
                         <ul class="treeview-menu">
-                            <li><a href=""><i class="fa fa-circle-o"></i> Crear</a></li>
-                            <li><a href=""><i class="fa fa-circle-o"></i> Consultar</a></li>
+				             <li><a href="{{ url('empresa/crear') }}"><i class="fa fa-circle-o"></i> Crear</a></li>
+                            <li><a href="{{ url('empresa/crear') }}"><i class="fa fa-circle-o"></i> Consultar</a></li>
+
                         </ul>
                     </li>
                 </ul>
@@ -76,10 +77,10 @@
                 </ul>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="#"><i class="fa fa-cog"></i> Color <i class="fa fa-angle-left pull-right"></i></a>
+                        <a href="#"><i class="fa fa-ticket"></i> Tipo Producto <i class="fa fa-angle-left pull-right"></i></a>
                         <ul class="treeview-menu">
-                            <li><a href="{{ url('color/create') }}"><i class="fa fa-circle-o"></i> Registrar</a></li>
-                            <li><a href="{{ url('color/listar') }}"><i class="fa fa-circle-o"></i> Consultar</a></li>
+                            <li><a href="{{ url('tipo/crear') }}"><i class="fa fa-circle-o"></i> Crear</a></li>
+                            <li><a href="{{ url('tipo/listar') }}"><i class="fa fa-circle-o"></i> Consultar</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -102,8 +103,8 @@
                     <li>
                         <a href="#"><i class="fa fa-ticket"></i> Orden de Compra <i class="fa fa-angle-left pull-right"></i></a>
                         <ul class="treeview-menu">
-                            <li><a href="{{ url('') }}"><i class="fa fa-circle-o"></i> Crear</a></li>
-                            <li><a href="{{ url('') }}"><i class="fa fa-circle-o"></i> Consultar</a></li>
+                            <li><a href="{{ url('inventario/create') }}"><i class="fa fa-circle-o"></i> Crear</a></li>
+                            <li><a href="{{ url('inventario/listar') }}"><i class="fa fa-circle-o"></i> Consultar</a></li>
                         </ul>
                     </li>
                 </ul>

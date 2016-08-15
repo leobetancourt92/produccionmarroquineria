@@ -5,7 +5,7 @@
     <!-- Default box -->
     <div class="box">
         <div class="box-header with-border">
-            <center><h3 class="box-title"><i class="fa fa-users fa-2x"></i>REGISTRO DE CUENTAS</h3></center>
+            <center><h3 class="box-title"><i class="fa fa-users fa-2x"></i>REGISTRO DE TIPOS DE PRODUCTOS</h3></center>
             <div class="box-tools pull-right">
                 <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i
                         class="fa fa-minus"></i></button>
@@ -19,7 +19,7 @@
                         <h3 class="box-title"></h3>
                     </div><!-- /.box-header -->
 
-                    <form name="formularios" id="formularios"  class="form-horizontal" method="post" autocomplete="off" action="<?php echo url("talla/crear") ?>">
+                    <form name="formularios" id="formularios"  class="form-horizontal" method="post" autocomplete="off" action="<?php echo url("tipo/crear") ?>">
                         <div class="box-body">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -30,31 +30,19 @@
                             </div>
 
                             <div class="col-lg-6 form-group">
-                                <label class="col-sm-3 control-label" for="nombre-talla">Dimensi&oacute;n</label>
+                                <label class="col-sm-3 control-label" for="descripcion">Descripcion</label>
 
                                 <div class="col-xs-9">
-                                    <input type="text" class="form-control" name="dimension" placeholder="Nombre" required>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 form-group">
-                                <label class="col-sm-3 control-label" for="nombre-talla">Tipo de producto</label>
-
-                                <div class="col-lg-9">
-                                    <select class="form-control select2-single" name="tipo_producto" placeholder="Nombre" required>
-                                        <option>Selecciona Tipo Producto</option>
-                                        <?php foreach ($objTipoProductos as $tipo) { ?>
-                                            <option value="<?php echo $tipo->tip_pro_id ?>"><?php echo $tipo->tip_descripcion ?></option>
-                                        <?php } ?>
-                                    </select>
+                                    <input type="text" class="form-control" name="descripcion" placeholder="Descripcion del Producto" required>
                                 </div>
                             </div>
 
                         </div>
 
                         <div class="box-footer">
-                            <div class="col-sm-3"></div>
-                            <button type="submit" class="btn btn-primary" onclick="valida_envia()">Registrar</button>
+                            <div class="col-sm-1">
+                                <button type="submit" class="btn btn-primary">Registrar</button>
+                            </div>
                         </div>
 
                     </form><!-- /.form-->
@@ -65,4 +53,3 @@
     </div><!-- /.box-->
 </section>
 @endsection
-

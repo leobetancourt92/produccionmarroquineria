@@ -5,7 +5,7 @@
     <!-- Default box -->
     <div class="box">
         <div class="box-header with-border">
-            <center> <h3 class="box-title"><i class="fa fa-users fa-2x"></i>REGISTRO DE CUENTAS</h3></center>
+            <center> <h3 class="box-title"><i class="fa fa-users fa-2x"></i>REGISTRO DE PRODUCTOS</h3></center>
             <div class="box-tools pull-right">
                 <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
             </div>
@@ -60,18 +60,29 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 form-group" >
+<!--                            <div class="col-lg-6 form-group" >-->
+<!--                                <label class="col-sm-3 control-label" for="color">Color</label>-->
+<!--                                <div class="col-lg-9">-->
+<!--                                    <select class="form-control js-example-basic-single" id="color" name="color">-->
+<!--                                        <option>Selecciona Color</option>-->
+<!--                                        --><?php //foreach ($objColor as $color){?>
+<!--                                           <option value="--><?php //echo $color->col_id?><!--">--><?php //echo $color->col_descripcion ?><!--</option>-->
+<!--                                        --><?php //}?>
+<!--                                    </select>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                            <div class="col-lg-6 form-group">
                                 <label class="col-sm-3 control-label" for="color">Color</label>
+
                                 <div class="col-lg-9">
-                                    <select class="form-control js-example-basic-single" id="color" name="color">
-                                        <option>Selecciona Color</option>
-                                        <?php foreach ($objColor as $color){?>
-                                           <option value="<?php echo $color->col_id?>"><?php echo $color->col_descripcion ?></option>
-                                        <?php }?>
-                                    </select>
+                                    <div class="example-content-widget">
+                                        <input type="text" data-format="hex" class="form-control" id="cp8" value=""/>
+                                    </div>
                                 </div>
                             </div>
-                        </div>                
+
+
+                        </div>
 
                         <div class="box-footer">
                             <button type="submit" class="btn btn-primary" >Registrar</button>

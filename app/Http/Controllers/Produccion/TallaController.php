@@ -59,14 +59,19 @@ class TallaController extends Controller {
         $objTalla = \DB::select("SELECT * FROM talla");
         return view("Modulos.Produccion.Talla.listar", compact("objTalla"));
     }
+
     public function getEditar($id){
+
+        $sql = "SELECT * FROM tipo_producto";
+        $objTipoProductos = \DB::select($sql);
+
         $objTalla = \DB::select("SELECT * FROM talla WHERE tal_id = $id");
-         return view("Modulos.Produccion.Talla.editar", compact("objTalla"));
+         return view("Modulos.Produccion.Talla.editar", compact("objTalla",'objTipoProductos'));
     }
     
     public function postEditar(){
         $datos = \Request::all();
-        $objTalla = \DB::select("UPDATE talla SET tal_dimension = '".$datos['dimension']."' WHERE tal_id = ".$datos['id']."");
+        $objTalla = \DB::select("UPDATE talla SET tal_dimension = '".$datos['dimension']."'  WHERE tal_id = ".$datos['id']."");
         return  \Redirect::to('talla/listar');
     }
     

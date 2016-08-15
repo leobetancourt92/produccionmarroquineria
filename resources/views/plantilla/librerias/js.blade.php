@@ -1,4 +1,3 @@
-
 <script>
     $( ".select2-single, .select2-multiple" ).select2( {
         theme: "bootstrap",
@@ -11,8 +10,9 @@
         $( this ).parent().nextAll( "select" ).prop( "disabled", !this.checked );
     });
 </script>
-<!-- REQUIRED JS SCRIPTS -->
 
+<!-- REQUIRED JS SCRIPTS -->
+<script src="{{ asset('js/bootstrap-colorpicker.js') }}"></script>
 <!-- DataTables -->
 <script src="{{ asset('plugins/datatables/jquery.dataTables.min.js') }}" type="text/javascript"></script>
 <!-- BootstrapDataTables  3.3.2 JS -->

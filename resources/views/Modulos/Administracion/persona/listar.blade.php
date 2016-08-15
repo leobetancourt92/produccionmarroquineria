@@ -1,13 +1,3 @@
-<?php
-//
-/**
- * @Nombre: ${user}Mercedes Ortiz Cardenas
- * @Fecha:  14/06/2016
- * @Hora:  12.52 PM
- * @Año:   ${year}
- * @Categoria: ${project_name}
- */
-?>
 @extends('menu.estructura')
 @section('content')
     <!-- Confirmacion de Desactivar -->
@@ -17,7 +7,7 @@
         <!-- Default box -->
         <div class="box">
             <div class="box-header with-border">
-                <center><h3 class="box-title"> Listado de Tallas</h3></center>
+                <center><h3 class="box-title"> Listado de Personas</h3></center>
                 <div class="box-tools pull-right">
                     <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i
                                 class="fa fa-minus"></i></button>
