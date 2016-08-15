@@ -51,7 +51,7 @@
                             <div class="col-lg-6 form-group">
                                 <label class="col-sm-3 control-label" for="talla">Talla</label>
                                 <div class="col-lg-9">
-                                    <select class="js-example-basic-single form-control" id="talla" name="talla">
+                                    <select class="form-control select2-single" id="talla" name="talla">
                                         <option>Selecciona Talla</option>
                                         <?php foreach ($objTalla as $talla){?>
                                             <option value="<?php echo $talla->tal_id?>"><?php echo $talla->tal_dimension ?></option>
@@ -63,7 +63,7 @@
                             <div class="col-lg-6 form-group" >
                                 <label class="col-sm-3 control-label" for="color">Color</label>
                                 <div class="col-lg-9">
-                                    <select class="form-control js-example-basic-single" id="color" name="color">
+                                    <select class="form-control select2-single" id="color" name="color">
                                         <option>Selecciona Color</option>
                                         <?php foreach ($objColor as $color){?>
                                            <option value="<?php echo $color->col_id?>"><?php echo $color->col_descripcion ?></option>

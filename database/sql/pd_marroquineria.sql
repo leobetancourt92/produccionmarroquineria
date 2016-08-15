@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-08-2016 a las 20:08:18
+-- Tiempo de generación: 15-08-2016 a las 20:11:00
 -- Versión del servidor: 5.7.9
 -- Versión de PHP: 5.6.16
 
@@ -2521,7 +2521,7 @@ DROP TABLE IF EXISTS `producto`;
 CREATE TABLE IF NOT EXISTS `producto` (
   `pro_id` int(11) NOT NULL AUTO_INCREMENT,
   `pro_descripcion` varchar(100) DEFAULT NULL,
-  `por_costo` int(11) DEFAULT NULL,
+  `pro_costo` int(11) DEFAULT NULL,
   `pro_cantidad` int(11) DEFAULT NULL,
   `tal_id` int(11) NOT NULL,
   `col_id` int(11) NOT NULL,
@@ -2582,18 +2582,26 @@ CREATE TABLE IF NOT EXISTS `tipo_producto` (
 
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `idusuario` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `nombre` varchar(100) DEFAULT NULL,
   `apellido` varchar(100) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(60) DEFAULT NULL,
   `remember_token` varchar(100) NOT NULL,
   `create_at` timestamp(6) NULL DEFAULT NULL,
-  `update_at` timestamp(6) NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
   `estado` tinyint(1) DEFAULT '1',
-  PRIMARY KEY (`idusuario`),
+  PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `email`, `password`, `remember_token`, `create_at`, `updated_at`, `estado`) VALUES
+(1, 'Desarrollo', 'Desarrollo', 'desarrollo@sena.com', '$2y$10$9R/SilIaZWVfMiNk38nyJuyP98lxQXkhY1Vec/b0OccP1UkN332gG', 'dD3nwZnSppG5TwuuZtshsDssNJbzL583eEsohpI1Fe3gaZlh8b6iIsw2F05T', '2016-08-15 19:55:41.971000', '2016-08-16 00:59:47', 1),
+(2, 'Documentacion', 'Documentacion', 'documnetacion@sena.com', '$2y$10$9R/SilIaZWVfMiNk38nyJuyP98lxQXkhY1Vec/b0OccP1UkN332gG', 'dD3nwZnSppG5TwuuZtshsDssNJbzL583eEsohpI1Fe3gaZlh8b6iIsw2F05T', '2016-08-15 20:10:26.755000', NULL, 1);
 
 --
 -- Restricciones para tablas volcadas
