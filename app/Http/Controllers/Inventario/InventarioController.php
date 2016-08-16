@@ -70,6 +70,12 @@ class InventarioController extends Controller {
     return view("Modulos.Produccion.Productos.listar", compact('productos'));
   }
 
+  public function getBodega() {
+    $sql       = "select * from bodega";
+    $bodega = \DB::select($sql);
+    return view("Modulos.Inventario.Bodega.listar", compact('bodega'));
+  }
+
   public function getEditar($pro_id) {
 
     $sql      = "SELECT * FROM color";

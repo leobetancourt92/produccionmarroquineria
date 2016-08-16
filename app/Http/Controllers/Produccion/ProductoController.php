@@ -25,6 +25,7 @@ class ProductoController extends Controller {
    * @return Response
    */
   public function getCreate() {
+
     $sql      = "SELECT * FROM color";
     $objColor = \DB::select($sql);
 
@@ -32,6 +33,8 @@ class ProductoController extends Controller {
     $objTalla = \DB::select($sql);
 
     return view("Modulos.Produccion.Productos.create", compact('objColor', 'objTalla'));
+
+
   }
 
   public function postCreate(Request $request) {
@@ -51,6 +54,21 @@ class ProductoController extends Controller {
         $talla,
         $color
     ));
+
+    $sql= "select pro_id from producto ORDER by pro_id DESC LIMIT 1;";
+    $productos = \DB::select($sql);
+
+    foreach ($productos as $producto):
+      $id=$producto->pro_id;
+    endforeach;
+
+    $sql = DB::insert("INSERT INTO "
+        . "bodega (pro_id, bod_total) "
+        . "VALUES(?,?)", array(
+        $id,
+        $cantidad
+    ));
+
 
     if ($sql <> 0):
       Alert::success('Producto Insertado Con exito!')->persistent('Cerrar')->autoclose(3000);
@@ -115,6 +133,39 @@ class ProductoController extends Controller {
     $productos = \DB::select("update producto SET pro_descripcion ='" . $datos['descripcion'] . "',pro_costo='" . $datos['costo'] . "', pro_cantidad='" . $datos['cantidad'] . "', tal_id='" . $datos['talla'] . "', col_id='" . $datos['color'] . "' where pro_id='" . $datos['id'] . "'");
 
     Alert::success('Producto Actualizado Con exito!')->persistent('Cerrar')->autoclose(3000);
+
+    return Redirect::to(url('producto/listar'));
+  }
+
+  public function getCantidad($pro_id) {
+
+    $sql       = "select * from producto where pro_id=$pro_id";
+    $productos = \DB::select($sql);
+    return view("Modulos.Produccion.Productos.cantidad", compact('productos'));
+  }
+
+  public function postCantidad() {
+
+    $datos     = \Request::all();
+    $nueva_cantidad = $datos['cantidad'];
+    $pro_id=$datos['id'];
+
+    $sql= "select pro_cantidad from producto where pro_id=$pro_id";
+    $productos = \DB::select($sql);
+
+    foreach ($productos as $producto):
+    $cantidad=$producto->pro_cantidad;
+    endforeach;
+
+    $total=0;
+
+    $total= $cantidad + $nueva_cantidad;
+
+    $productos = \DB::select("update bodega SET  bod_total='" .$total . "' where pro_id='" . $datos['id'] . "'");
+    $productos = \DB::select("update producto SET  pro_cantidad='" .$total . "' where pro_id='" . $datos['id'] . "'");
+
+
+    Alert::success('Cantidad Actualizada Con exito!')->persistent('Cerrar')->autoclose(3000);
 
     return Redirect::to(url('producto/listar'));
   }

@@ -64,6 +64,8 @@
                                                     class="btn btn-success btn-sm" id="add">Activar
                                             </button>
                                             <?php endif; ?>
+                                            <a href="<?php echo url("producto/cantidad/" . $producto->pro_id) ?>"
+                                               class="btn btn-success btn-sm">Agregar Mas Cantidad</a>
                                         </td>
                                     </tr>
                                     <?php }?>

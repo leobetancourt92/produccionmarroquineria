@@ -7,14 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f927a412-10bf-47b7-8749-085b8d3972c8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Administracion/EmpresaController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Administracion/EmpresaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Administracion/PersonaController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Administracion/PersonaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Modulos/Administracion/empresa/crear.blade.php" afterPath="$PROJECT_DIR$/resources/views/Modulos/Administracion/empresa/crear.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Modulos/Administracion/empresa/listar.blade.php" afterPath="$PROJECT_DIR$/resources/views/Modulos/Administracion/empresa/listar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Modulos/Administracion/persona/crear.blade.php" afterPath="$PROJECT_DIR$/resources/views/Modulos/Administracion/persona/crear.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Modulos/Administracion/persona/editar.blade.php" afterPath="$PROJECT_DIR$/resources/views/Modulos/Administracion/persona/editar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Modulos/Administracion/persona/listar.blade.php" afterPath="$PROJECT_DIR$/resources/views/Modulos/Administracion/persona/listar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Modulos/Administracion/persona/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Modulos/Administracion/persona/show.blade.php" />
     </list>
     <ignored path="pp_marroquineria.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,6 +33,24 @@
         <option name="myItemId" />
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
       </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - pd_marroquineria@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - pd_marroquineria@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="bodega" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
     </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
@@ -48,9 +58,9 @@
     <favorites_list name="pp_marroquineria" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="pd_marroquineria.tipo_producto" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/8409bcdb/ac6acfe6-8a38-4bf5-a966-99a9058ce963/pd_marroquineria.tipo_producto">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="pd_marroquineria.bodega" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/8409bcdb/ac6acfe6-8a38-4bf5-a966-99a9058ce963/pd_marroquineria.bodega">
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -64,39 +74,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listar.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Modulos/Produccion/Productos/listar.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.8846154">
-              <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
-              <folding>
-                <marker date="1471311008126" expanded="true" signature="850:4453" placeholder="..." />
-                <marker date="1471311008126" expanded="true" signature="944:4418" placeholder="..." />
-                <marker date="1471311008126" expanded="true" signature="988:1606" placeholder="..." />
-                <marker date="1471311008126" expanded="true" signature="1033:1561" placeholder="..." />
-                <marker date="1471311008126" expanded="true" signature="1650:4377" placeholder="..." />
-                <marker date="1471311008126" expanded="true" signature="1769:4286" placeholder="..." />
-                <marker date="1471311008126" expanded="true" signature="2332:3036" placeholder="..." />
-                <marker date="1471311008126" expanded="true" signature="2497:2644" placeholder="..." />
-                <marker date="1471311008126" expanded="true" signature="2781:2930" placeholder="..." />
-                <marker date="1471311008126" expanded="true" signature="3081:4244" placeholder="..." />
-                <marker date="1471311008126" expanded="true" signature="3191:3273" placeholder="..." />
-                <marker date="1471311008126" expanded="true" signature="3386:3474" placeholder="..." />
-                <marker date="1471311008126" expanded="true" signature="3666:3823" placeholder="..." />
-                <marker date="1471311008126" expanded="true" signature="3985:4138" placeholder="..." />
-              </folding>
+      <file leaf-file-name="pd_marroquineria.producto" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/8409bcdb/ac6acfe6-8a38-4bf5-a966-99a9058ce963/pd_marroquineria.producto">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductoController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Produccion/ProductoController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.615385">
-              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding>
-                <element signature="e#51#87#0#PHP" expanded="false" />
-              </folding>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -104,18 +92,8 @@
       <file leaf-file-name="lateral.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/plantilla/partes/lateral.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.923077">
-              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="crear.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/Modulos/Administracion/empresa/crear.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-8.192307">
+              <caret line="98" column="61" selection-start-line="98" selection-start-column="61" selection-end-line="98" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -124,20 +102,41 @@
       <file leaf-file-name="InventarioController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Inventario/InventarioController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.076923">
-              <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+            <state vertical-scroll-proportion="-4.245283">
+              <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
               <folding>
-                <element signature="e#51#87#0#PHP" expanded="false" />
+                <element signature="e#718#1468#0#PHP" expanded="false" />
+                <element signature="e#1472#1935#0#PHP" expanded="false" />
+                <element signature="e#2122#2515#0#PHP" expanded="false" />
+                <element signature="e#2519#2723#0#PHP" expanded="false" />
+                <element signature="e#2727#2928#0#PHP" expanded="false" />
+                <element signature="e#2932#3320#0#PHP" expanded="false" />
+                <element signature="e#3324#3822#0#PHP" expanded="false" />
+                <marker date="1471324093616" expanded="true" signature="521:540" placeholder="SELECT * FRO..color..." />
+                <marker date="1471324093616" expanded="true" signature="596:615" placeholder="SELECT * FRO..talla..." />
+                <marker date="1471324093616" expanded="true" signature="1024:1147" placeholder="INSERT INTO producto..." />
+                <marker date="1471324093616" expanded="true" signature="1520:1815" placeholder="select p.pro..producto..." />
+                <marker date="1471324093616" expanded="true" signature="1987:1994" placeholder="select p.pro..producto..." />
+                <marker date="1471324093616" expanded="true" signature="1987:2007" placeholder="select * fro..bodega..." />
+                <marker date="1471324093616" expanded="true" signature="2177:2196" placeholder="SELECT * FRO..color..." />
+                <marker date="1471324093616" expanded="true" signature="2252:2271" placeholder="SELECT * FRO..talla..." />
+                <marker date="1471324093616" expanded="true" signature="2328:2364" placeholder="select * fro..producto..." />
+                <marker date="1471324093616" expanded="true" signature="2579:2625" placeholder="update produ..." />
+                <marker date="1471324093616" expanded="true" signature="2784:2830" placeholder="update produ..." />
+                <marker date="1471324093616" expanded="true" signature="2984:3003" placeholder="SELECT * FRO..color..." />
+                <marker date="1471324093616" expanded="true" signature="3059:3078" placeholder="SELECT * FRO..talla..." />
+                <marker date="1471324093616" expanded="true" signature="3135:3171" placeholder="select * fro..producto..." />
+                <marker date="1471324093616" expanded="true" signature="3419:3670" placeholder="update produ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ac6acfe6-8a38-4bf5-a966-99a9058ce963/console.sql">
+      <file leaf-file-name="listar.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/Modulos/Inventario/Bodega/listar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.1333333">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.12671232">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -175,7 +174,6 @@
         <option value="$PROJECT_DIR$/app/Services/Registrar.php" />
         <option value="$PROJECT_DIR$/resources/views/Modulos/Produccion/Talla/listar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Modulos/Produccion/Talla/crear.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Modulos/Produccion/Productos/listar.blade.php" />
         <option value="$PROJECT_DIR$/public/js/Confirmacion.js" />
         <option value="$PROJECT_DIR$/resources/views/plantilla/librerias/css.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Modulos/Produccion/TipoProducto/crear.blade.php" />
@@ -190,15 +188,19 @@
         <option value="$PROJECT_DIR$/resources/views/Modulos/Administracion/empresa/listar.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Produccion/TipoProductoController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Administracion/PersonaController.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Produccion/TallaController.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/views/Modulos/Produccion/Productos/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Modulos/Administracion/persona/crear.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Modulos/Produccion/Productos/cantidad.blade.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ac6acfe6-8a38-4bf5-a966-99a9058ce963/console.sql" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Inventario/InventarioController.php" />
+        <option value="$PROJECT_DIR$/resources/views/Modulos/Produccion/Productos/listar.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Produccion/ProductoController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Inventario/BodegaController.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Inventario/InventarioController.php" />
         <option value="$PROJECT_DIR$/resources/views/plantilla/partes/lateral.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Modulos/Inventario/Bodega/listar.blade.php" />
       </list>
     </option>
   </component>
@@ -206,6 +208,16 @@
   <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="PhpServers">
     <servers />
@@ -242,9 +254,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -476,6 +488,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="OrdenCompra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pp_marroquineria" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pp_marroquineria" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Modulos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Inventario" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bodega" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1558,7 +1600,8 @@
       <updated>1470598996248</updated>
       <workItem from="1470598999441" duration="46027000" />
       <workItem from="1471001847218" duration="9007000" />
-      <workItem from="1471283893999" duration="11769000" />
+      <workItem from="1471283893999" duration="13946000" />
+      <workItem from="1471315893562" duration="6547000" />
     </task>
     <task id="LOCAL-00001" summary="PRUEBA">
       <created>1470599064650</created>
@@ -1576,23 +1619,23 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66803000" />
+    <option name="totallyTimeSpent" value="75527000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718122" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.94043887" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4248366" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18338558" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27155825" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2700454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28971255" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1637,7 +1680,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Produccion/ProductoController.php</url>
-          <line>85</line>
+          <line>103</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -1650,73 +1693,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/bootstrap-colorpicker-master/bootstrap-colorpicker-master/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.590991">
-          <caret line="546" column="19" selection-start-line="546" selection-start-column="19" selection-end-line="546" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/Confirmacion.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77868855">
-          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/99615827-3da1-4aae-bf5d-4eb314b52762">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>99615827-3da1-4aae-bf5d-4eb314b52762</OriginalElement>
-          <nodes>
-            <node x="" y="">99615827-3da1-4aae-bf5d-4eb314b52762.TABLE:pp_marroquineria.persona</node>
-            <node x="" y="">99615827-3da1-4aae-bf5d-4eb314b52762.TABLE:pp_marroquineria.tipo_producto</node>
-            <node x="" y="">99615827-3da1-4aae-bf5d-4eb314b52762.TABLE:pp_marroquineria.color</node>
-            <node x="" y="">99615827-3da1-4aae-bf5d-4eb314b52762.TABLE:pp_marroquineria.bodega</node>
-            <node x="" y="">99615827-3da1-4aae-bf5d-4eb314b52762.TABLE:pp_marroquineria.migrations</node>
-            <node x="" y="">99615827-3da1-4aae-bf5d-4eb314b52762.TABLE:pp_marroquineria.password_resets</node>
-            <node x="" y="">99615827-3da1-4aae-bf5d-4eb314b52762.TABLE:pp_marroquineria.empresa</node>
-            <node x="" y="">99615827-3da1-4aae-bf5d-4eb314b52762.TABLE:pp_marroquineria.producto</node>
-            <node x="" y="">99615827-3da1-4aae-bf5d-4eb314b52762.TABLE:pp_marroquineria.tipo_cliente</node>
-            <node x="" y="">99615827-3da1-4aae-bf5d-4eb314b52762.TABLE:pp_marroquineria.detalle_orden_de_compra</node>
-            <node x="" y="">99615827-3da1-4aae-bf5d-4eb314b52762.TABLE:pp_marroquineria.usuarios</node>
-            <node x="" y="">99615827-3da1-4aae-bf5d-4eb314b52762.TABLE:pp_marroquineria.orden_de_compra</node>
-            <node x="" y="">99615827-3da1-4aae-bf5d-4eb314b52762.TABLE:pp_marroquineria.talla</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.2295896328293738" x="745.0" y="453.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/plantilla/librerias/css.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/plantilla/partes/piedepagina.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17465754">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/plantilla/partes/encabezado.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1769,13 +1745,6 @@
     <entry file="file://$PROJECT_DIR$/resources/views/Modulos/Produccion/Productos/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Modulos/Produccion/Productos/editar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -1863,7 +1832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.4243903">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1871,7 +1839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08292683">
           <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1879,7 +1846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36480686">
           <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1887,7 +1853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3253424">
           <caret line="49" column="45" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1895,7 +1860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.52397263">
           <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1911,7 +1875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34760273">
           <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1919,7 +1882,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.1660959">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1927,7 +1889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.6153846">
           <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1935,12 +1896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37328768">
           <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
-          <folding>
-            <marker date="1471311008026" expanded="true" signature="1266:1288" placeholder="SELECT * FRO..usuarios..." />
-            <marker date="1471311008026" expanded="true" signature="1442:1476" placeholder="SELECT * FRO..usuarios..." />
-            <marker date="1471311008026" expanded="true" signature="1875:1913" placeholder="update usuar..." />
-            <marker date="1471311008026" expanded="true" signature="2091:2129" placeholder="update usuar..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1948,15 +1903,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.62157536">
           <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33047944">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1964,21 +1910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37842464">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#51#87#0#PHP" expanded="true" />
-            <element signature="e#706#1214#0#PHP" expanded="false" />
-            <element signature="e#1218#1376#0#PHP" expanded="false" />
-            <marker date="1471311008021" expanded="true" signature="575:602" placeholder="SELECT * FRO..tipo_producto..." />
-            <marker date="1471311008021" expanded="true" signature="982:1151" placeholder="INSERT INTO talla..." />
-            <marker date="1471311008021" expanded="true" signature="1442:1461" placeholder="SELECT * FRO..talla..." />
-            <marker date="1471311008021" expanded="true" signature="1602:1629" placeholder="SELECT * FRO..tipo_producto..." />
-            <marker date="1471311008021" expanded="true" signature="1713:1748" placeholder="SELECT * FRO..talla..." />
-            <marker date="1471311008021" expanded="true" signature="1964:2056" placeholder="UPDATE talla..." />
-            <marker date="1471311008021" expanded="true" signature="2188:2223" placeholder="SELECT * FRO..talla..." />
-            <marker date="1471311008021" expanded="true" signature="2419:2470" placeholder="DELETE FROM ..." />
-            <marker date="1471311008021" expanded="true" signature="2589:2632" placeholder="update talla..." />
-            <marker date="1471311008021" expanded="true" signature="2809:2852" placeholder="update talla..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1986,15 +1917,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.775685">
           <caret line="61" column="75" selection-start-line="61" selection-start-column="75" selection-end-line="61" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Modulos/Produccion/Productos/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15924658">
-          <caret line="53" column="79" selection-start-line="53" selection-start-column="79" selection-end-line="53" selection-end-column="79" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2002,7 +1924,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5856164">
           <caret line="43" column="79" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="79" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2010,7 +1931,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3321859">
           <caret line="2516" column="45" selection-start-line="2516" selection-start-column="38" selection-end-line="2516" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2018,7 +1938,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -2031,6 +1950,26 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Modulos/Produccion/Productos/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16780822">
+          <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8409bcdb/ac6acfe6-8a38-4bf5-a966-99a9058ce963/pd_marroquineria.tipo_cliente">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2040,26 +1979,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Modulos/Produccion/Productos/listar.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/Modulos/Administracion/empresa/crear.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8846154">
-          <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
-          <folding>
-            <marker date="1471311008126" expanded="true" signature="850:4453" placeholder="..." />
-            <marker date="1471311008126" expanded="true" signature="944:4418" placeholder="..." />
-            <marker date="1471311008126" expanded="true" signature="988:1606" placeholder="..." />
-            <marker date="1471311008126" expanded="true" signature="1033:1561" placeholder="..." />
-            <marker date="1471311008126" expanded="true" signature="1650:4377" placeholder="..." />
-            <marker date="1471311008126" expanded="true" signature="1769:4286" placeholder="..." />
-            <marker date="1471311008126" expanded="true" signature="2332:3036" placeholder="..." />
-            <marker date="1471311008126" expanded="true" signature="2497:2644" placeholder="..." />
-            <marker date="1471311008126" expanded="true" signature="2781:2930" placeholder="..." />
-            <marker date="1471311008126" expanded="true" signature="3081:4244" placeholder="..." />
-            <marker date="1471311008126" expanded="true" signature="3191:3273" placeholder="..." />
-            <marker date="1471311008126" expanded="true" signature="3386:3474" placeholder="..." />
-            <marker date="1471311008126" expanded="true" signature="3666:3823" placeholder="..." />
-            <marker date="1471311008126" expanded="true" signature="3985:4138" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.40753424">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="29" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Modulos/Produccion/Productos/editar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08732877">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2076,46 +2008,144 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Produccion/ProductoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59246576">
+          <caret line="163" column="42" selection-start-line="163" selection-start-column="42" selection-end-line="163" selection-end-column="42" />
+          <folding>
+            <element signature="e#472#747#0#PHP" expanded="false" />
+            <element signature="e#1848#2311#0#PHP" expanded="false" />
+            <element signature="e#2315#2708#0#PHP" expanded="false" />
+            <element signature="e#2712#2916#0#PHP" expanded="false" />
+            <element signature="e#2920#3121#0#PHP" expanded="false" />
+            <element signature="e#3125#3513#0#PHP" expanded="false" />
+            <element signature="e#3517#4015#0#PHP" expanded="false" />
+            <element signature="e#4019#4242#0#PHP" expanded="false" />
+            <marker date="1471321498959" expanded="true" signature="520:539" placeholder="SELECT * FRO..color..." />
+            <marker date="1471321498959" expanded="true" signature="595:614" placeholder="SELECT * FRO..talla..." />
+            <marker date="1471321498959" expanded="true" signature="1057:1180" placeholder="INSERT INTO producto..." />
+            <marker date="1471321498959" expanded="true" signature="1298:1354" placeholder="select pro_i..producto..." />
+            <marker date="1471321498959" expanded="true" signature="1503:1579" placeholder="INSERT INTO bodega..." />
+            <marker date="1471321498959" expanded="true" signature="1896:2191" placeholder="select p.pro..producto..." />
+            <marker date="1471321498959" expanded="true" signature="2370:2389" placeholder="SELECT * FRO..color..." />
+            <marker date="1471321498959" expanded="true" signature="2445:2464" placeholder="SELECT * FRO..talla..." />
+            <marker date="1471321498959" expanded="true" signature="2521:2557" placeholder="select * fro..producto..." />
+            <marker date="1471321498959" expanded="true" signature="2772:2818" placeholder="update produ..." />
+            <marker date="1471321498959" expanded="true" signature="2977:3023" placeholder="update produ..." />
+            <marker date="1471321498959" expanded="true" signature="3177:3196" placeholder="SELECT * FRO..color..." />
+            <marker date="1471321498959" expanded="true" signature="3252:3271" placeholder="SELECT * FRO..talla..." />
+            <marker date="1471321498959" expanded="true" signature="3328:3364" placeholder="select * fro..producto..." />
+            <marker date="1471321498959" expanded="true" signature="3612:3863" placeholder="update produ..." />
+            <marker date="1471321498959" expanded="true" signature="4077:4113" placeholder="select * fro..producto..." />
+            <marker date="1471321498959" expanded="true" signature="4394:4441" placeholder="select * fro..producto..." />
+            <marker date="1471321498959" expanded="true" signature="4397:4441" placeholder="select * fro..producto..." />
+            <marker date="1471321498959" expanded="true" signature="4670:4750" placeholder="update bodeg..." />
+            <marker date="1471321498959" expanded="true" signature="4784:4869" placeholder="update produ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ac6acfe6-8a38-4bf5-a966-99a9058ce963/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1333333">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="48" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Modulos/Produccion/Productos/cantidad.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61130136">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8409bcdb/ac6acfe6-8a38-4bf5-a966-99a9058ce963/pd_marroquineria.producto">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Modulos/Produccion/Productos/listar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.9503424">
+          <caret line="67" column="89" selection-start-line="0" selection-start-column="0" selection-end-line="80" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8409bcdb/ac6acfe6-8a38-4bf5-a966-99a9058ce963/pd_marroquineria.bodega">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7935368">
+          <caret line="35" column="52" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Inventario/InventarioController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.076923">
-          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+        <state vertical-scroll-proportion="-4.245283">
+          <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
           <folding>
-            <element signature="e#51#87#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Produccion/ProductoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.615385">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="e#51#87#0#PHP" expanded="false" />
+            <element signature="e#718#1468#0#PHP" expanded="false" />
+            <element signature="e#1472#1935#0#PHP" expanded="false" />
+            <element signature="e#2122#2515#0#PHP" expanded="false" />
+            <element signature="e#2519#2723#0#PHP" expanded="false" />
+            <element signature="e#2727#2928#0#PHP" expanded="false" />
+            <element signature="e#2932#3320#0#PHP" expanded="false" />
+            <element signature="e#3324#3822#0#PHP" expanded="false" />
+            <marker date="1471324093616" expanded="true" signature="521:540" placeholder="SELECT * FRO..color..." />
+            <marker date="1471324093616" expanded="true" signature="596:615" placeholder="SELECT * FRO..talla..." />
+            <marker date="1471324093616" expanded="true" signature="1024:1147" placeholder="INSERT INTO producto..." />
+            <marker date="1471324093616" expanded="true" signature="1520:1815" placeholder="select p.pro..producto..." />
+            <marker date="1471324093616" expanded="true" signature="1987:1994" placeholder="select p.pro..producto..." />
+            <marker date="1471324093616" expanded="true" signature="1987:2007" placeholder="select * fro..bodega..." />
+            <marker date="1471324093616" expanded="true" signature="2177:2196" placeholder="SELECT * FRO..color..." />
+            <marker date="1471324093616" expanded="true" signature="2252:2271" placeholder="SELECT * FRO..talla..." />
+            <marker date="1471324093616" expanded="true" signature="2328:2364" placeholder="select * fro..producto..." />
+            <marker date="1471324093616" expanded="true" signature="2579:2625" placeholder="update produ..." />
+            <marker date="1471324093616" expanded="true" signature="2784:2830" placeholder="update produ..." />
+            <marker date="1471324093616" expanded="true" signature="2984:3003" placeholder="SELECT * FRO..color..." />
+            <marker date="1471324093616" expanded="true" signature="3059:3078" placeholder="SELECT * FRO..talla..." />
+            <marker date="1471324093616" expanded="true" signature="3135:3171" placeholder="select * fro..producto..." />
+            <marker date="1471324093616" expanded="true" signature="3419:3670" placeholder="update produ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/plantilla/partes/lateral.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.923077">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+        <state vertical-scroll-proportion="-8.192307">
+          <caret line="98" column="61" selection-start-line="98" selection-start-column="61" selection-end-line="98" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Modulos/Administracion/empresa/crear.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/Modulos/Inventario/Bodega/listar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.12671232">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
