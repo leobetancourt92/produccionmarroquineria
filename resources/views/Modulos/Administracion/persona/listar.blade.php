@@ -17,6 +17,9 @@
                 <div class="col-md-12">
                     <!-- general form elements -->
                     <div class="box box-primary">
+                        <div class="box-header">
+                            <h3 class="box-title">Listado de Personas</h3>
+                        </div><!-- /.box-header -->
                         <div class="box-success">
                             <div class="table-responsive">
                                 <table id="tabla" class="table table-bordered table-striped">
@@ -50,7 +53,7 @@
 	                                            <a href="<?php echo url("persona/editar/" . $persona->per_id) ?>"
 	                                               	class="btn btn-primary btn-sm">Editar</a>
 	                                               	
-	                                            <?php if($persona->per_estado == "ACTIVO" ): ?>
+	                                            <?php if($persona->per_estado == 1 ): ?>
 	                                            <button onclick="Desactivar(<?php echo $persona->per_id?>)"
 	                                                class="btn btn-danger btn-sm" id="dss">Desactivar
 	                                            </button>

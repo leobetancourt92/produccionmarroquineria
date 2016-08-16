@@ -6,6 +6,13 @@
     <section class="content">
         <!-- Default box -->
         <div class="box">
+            <div class="box-header with-border">
+                <center><h3 class="box-title"> Listado de Tallas</h3></center>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i
+                                class="fa fa-minus"></i></button>
+                </div>
+            </div>
             <div class="box-body">
                 <div class="col-md-12">
                     <!-- general form elements -->
@@ -33,7 +40,7 @@
                                     foreach ($empresas as $empresa) { ?>
                                         <tr>
                                             <td><?php echo $empresa->emp_id ?></td>
-                                            <td><?php echo $empresa->emp_Nit ?></td>
+                                            <td><?php echo $empresa->emp_nit ?></td>
                                             <td><?php echo $empresa->emp_razon_social ?></td>
                                             <td><?php echo $empresa->emp_direccion ?></td>                                        
                                             <td><?php echo $empresa->emp_telefono ?></td>
