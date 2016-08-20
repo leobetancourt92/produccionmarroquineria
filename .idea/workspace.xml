@@ -5,10 +5,7 @@
     <bookmark url="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Guard.php" description="public function logout();" line="97" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f927a412-10bf-47b7-8749-085b8d3972c8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor.rar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="f927a412-10bf-47b7-8749-085b8d3972c8" name="Default" comment="" />
     <ignored path="pp_marroquineria.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -1596,7 +1593,7 @@
       <workItem from="1471001847218" duration="9007000" />
       <workItem from="1471283893999" duration="13946000" />
       <workItem from="1471315893562" duration="8323000" />
-      <workItem from="1471653307303" duration="1291000" />
+      <workItem from="1471653307303" duration="1374000" />
     </task>
     <task id="LOCAL-00001" summary="PRUEBA">
       <created>1470599064650</created>
@@ -1614,7 +1611,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78594000" />
+    <option name="totallyTimeSpent" value="78677000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
