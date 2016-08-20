@@ -71,7 +71,7 @@ class InventarioController extends Controller {
   }
 
   public function getBodega() {
-    $sql       = "select * from bodega";
+    $sql= "select b.bod_id, p.pro_id,p.pro_descripcion,b.bod_total from bodega b JOIN producto p ON b.pro_id= p.pro_id";
     $bodega = \DB::select($sql);
     return view("Modulos.Inventario.Bodega.listar", compact('bodega'));
   }
