@@ -43,3 +43,5 @@
 <!-- AdminLTE for demo purposes -->
 <!-- Select2 4.0.3-->
 <script src="{{ asset('plugins/select2/select2.min.js') }}"></script>
+<!--Bootstrap Validator js -->
+<script src="{{ asset('js/bootstrapValidator.min.js') }}"></script>
