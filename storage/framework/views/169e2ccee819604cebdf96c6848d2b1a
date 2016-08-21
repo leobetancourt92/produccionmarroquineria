@@ -1,14 +1,14 @@
-<!--Creamos el script de validaciòn del formulario de creaciòn de persona -->
+<!--Creamos el script de validaciòn del formulario de creaciòn de Empresa -->
 
 <script>
 
     /*
-     * @author Leonardo Betancourt C
+     * @author  Leonardo Betancourt C
      */
 
     $(document).ready(function () {
-        
-       
+
+
         $('#signupForm1').bootstrapValidator({
             message: 'Este valor no es valido',
             feedbackIcons: {
@@ -17,50 +17,39 @@
                 validating: 'glyphicon glyphicon-refresh'
             },
             fields: {
-                per_identificacion: {
+                emp_Nit: {
                     validators: {
                         notEmpty: {
-                            message: 'El numero de documento es requerido'
+                            message: 'El NIT de la empresa es requerido *'
                         },
                         stringLength: {
                             min: 5,
-                            message: 'El numero de documento debe ser de minimo 5 caracteres'
+                            message: 'El NIT debe ser de minimo 5 caracteres'
                         },
                         regexp: {
                             regexp: /^[0-9]+$/,
-                            message: 'El numero de documento solo acepta caracteres numericos'
+                            message: 'El campo NIT solo acepta caracteres numericos'
                         }
                     }
                 },
-                per_nombres: {
+                emp_razon_social: {
                     validators: {
                         notEmpty: {
-                            message: 'El nombre de la persona es requerido'
+                            message: 'La razon social de la empresa es un campo requerido *'
                         }, regexp: {
                             regexp: /^[\xF1\s \xD1\s a-z\s \xC1\s \xE1\s \xC9\s \xE9\s \xCD\s \xED\s \xD3\s \xF3\s \xDA\s \xFA\s]+$/i,
                             message: 'El campo nombre solo acepta caracteres Alfabeticos'
                         }
                     }
                 },
-                per_apellidos: {
+                emp_direccion: {
                     validators: {
                         notEmpty: {
-                            message: 'El apellido de la persona es requerido'
-                        }, regexp: {
-                            regexp: /^[\xF1\s \xD1\s a-z\s \xC1\s \xE1\s \xC9\s \xE9\s \xCD\s \xED\s \xD3\s \xF3\s \xDA\s \xFA\s]+$/i,
-                            message: 'El campo apellido solo acepta caracteres Alfabeticos'
+                            message: 'La direccion de la empresa en un campo requerido'
                         }
                     }
                 },
-                per_direccion: {
-                    validators: {
-                        notEmpty: {
-                            message: 'la direccion  es un campo requerido'
-                        }
-
-                    }
-                },
-                per_telefono: {
+                emp_telefono: {
                     validators: {
                         notEmpty: {
                             message: 'El campo telefono es requerido'
@@ -72,18 +61,29 @@
 
                     }
                 },
-                per_fecha_nacimiento: {
-                    validators: {
-                        notEmpty: {
-                            message: 'El fecha de nacimiento es requerido'
-                        }
-                    }
-                },
                 tip_cli_id: {
                     validators: {
                         notEmpty: {
                             message: 'Por favor seleccione un tipo de cliente'
                         }
+                    }
+                },
+                emp_correo: {
+                    validators: {
+                        emailAddress: {
+                            message: 'esta no es una direccion de correo electronico valida'
+                        },
+                        notEmpty: {
+                            message: 'Por favor ingrese un correo electronico valido'
+                        }
+                        }
+                },
+                emp_contacto: {
+                    validators: {
+                        notEmpty: {
+                            message: 'El campo contacto es requerido *'
+                        }
+
                     }
                 },
                 ciu_id: {
@@ -92,19 +92,12 @@
                             message: 'Por favor seleccione una ciudad'
                         }
                     }
-                },
-                per_correo: {
-                    validators: {
-                        emailAddress: {
-                            message: 'esta no es una direccion de correo electronico valida'
-                        }
-                    }
                 }
 
             }
 
         }).on('success.field.fv', function (e, data) {
-            if (data.fv.getInvalidFields().length > 0) {    // There is invalid field
+            if (data.fv.getInvalidFields().length > 0) {
                 data.fv.disableSubmitButtons(true);
             }
         });

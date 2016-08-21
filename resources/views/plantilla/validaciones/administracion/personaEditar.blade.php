@@ -90,7 +90,7 @@
                 ciu_id: {
                     validators: {
                         notEmpty: {
-                            message: 'Por favor seleccione un tipo de cliente'
+                            message: 'Por favor seleccione una ciudad'
                         }
                     }
                 },

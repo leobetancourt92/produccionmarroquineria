@@ -1,8 +1,7 @@
-@extends('menu.estructura')
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <!-- invocamos el  archivo con las validaciones del formulario "Crear empresa" -->
-@include('plantilla.validaciones.administracion.empresaCrear')
+<?php echo $__env->make('plantilla.validaciones.administracion.empresaCrear', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 <!-- Default box -->
 <div class="box">
@@ -96,4 +95,5 @@
     </div><!-- /.box-body -->
 </div><!-- /.box-->
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('menu.estructura', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
