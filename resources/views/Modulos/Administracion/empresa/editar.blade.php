@@ -1,6 +1,9 @@
 @extends('menu.estructura')
 @section('content')
 
+<!-- invocamos el  archivo con las validaciones del formulario "Editar persona" -->
+@include('plantilla.validaciones.administracion.empresaEditar')
+
 <!-- Default box -->
 <div class="box">
     <div class="box-header with-border">
@@ -15,7 +18,7 @@
             <div class="box box-primary">
 				<?php foreach($empresas as $empresa){?>
                 <form name="signupForm1" id="signupForm1" class="form-horizontal" method="post" autocomplete="off" action="<?php echo url ('empresa/editar/')?>">
-                    <input type="hidden" name="emp_id" value="<?php echo $empresa->emp_id ?>"?>
+                    <input type="hidden" name="emp_id" value="<?php echo $empresa->emp_id ?>">
                     <input type="hidden" name="_token" value="<?php echo csrf_token() ?>">
                     <div class="box-body">
                         <div class="col-xs-12">
