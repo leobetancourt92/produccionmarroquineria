@@ -3,7 +3,7 @@
 <script>
 
     /*
-     * @author Leonardo Betancourt C
+     * @author  Leonardo Betancourt C
      */
 
     $(document).ready(function () {

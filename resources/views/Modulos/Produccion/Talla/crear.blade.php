@@ -1,6 +1,6 @@
 @extends('menu.estructura')
 @section('content')
-<!-- invocamos el  archivo con las validaciones del formulario "Crear empresa" -->
+<!-- invocamos el  archivo con las validaciones del formulario "Crear talla" -->
 @include('plantilla.validaciones.produccion.tallaCrear')
 <!-- Main content -->
 <section class="content">
