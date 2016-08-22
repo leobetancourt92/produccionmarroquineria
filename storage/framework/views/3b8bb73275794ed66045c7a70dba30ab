@@ -1,7 +1,6 @@
-@extends('menu.estructura')
-@section('content')
+<?php $__env->startSection('content'); ?>
 <!-- invocamos el  archivo con las validaciones del formulario "Crear empresa" -->
-@include('plantilla.validaciones.produccion.tallaCrear')
+<?php echo $__env->make('plantilla.validaciones.produccion.tallaCrear', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <!-- Main content -->
 <section class="content">
     <!-- Default box -->
@@ -23,7 +22,7 @@
 
                     <form name="formularios" id="formularios"  class="form-horizontal" method="post" autocomplete="off" action="<?php echo url("talla/crear") ?>">
                         <div class="box-body">
-                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
                             <div class="col-lg-6 form-group">
                                 <label class="col-sm-3 control-label" for="nombre-talla">Dimensi&oacute;n</label>
 
@@ -59,5 +58,7 @@
         </div><!-- /.box-body -->
     </div><!-- /.box-->
 </section>
-@endsection
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('menu.estructura', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
