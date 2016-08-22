@@ -1,5 +1,8 @@
 @extends('menu.estructura')
 @section('content')
+<?php 
+error_reporting(0);
+?>
 <section class="content">
     <!-- Default box -->
     <div class="box">
