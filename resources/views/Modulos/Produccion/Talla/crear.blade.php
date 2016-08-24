@@ -1,5 +1,7 @@
 @extends('menu.estructura')
 @section('content')
+<!-- invocamos el  archivo con las validaciones del formulario "Crear talla" -->
+@include('plantilla.validaciones.produccion.tallaCrear')
 <!-- Main content -->
 <section class="content">
     <!-- Default box -->
@@ -26,7 +28,7 @@
                                 <label class="col-sm-3 control-label" for="nombre-talla">Dimensi&oacute;n</label>
 
                                 <div class="col-xs-9">
-                                    <input type="text" class="form-control" name="dimension" placeholder="Nombre" required>
+                                    <input type="text" class="form-control" name="dimension" id="dimension" placeholder="Nombre">
                                 </div>
                             </div>
 
@@ -34,8 +36,8 @@
                                 <label class="col-sm-3 control-label" for="nombre-talla">Tipo de producto</label>
 
                                 <div class="col-lg-9">
-                                    <select class="form-control select2-single" name="tipo_producto" placeholder="Nombre" required>
-                                        <option>Selecciona Tipo Producto</option>
+                                    <select class="form-control select2-single" name="tipo_producto" id="tipoproducto" placeholder="Nombre"  >
+                                        <option value="">Selecciona Tipo Producto</option>
                                         <?php foreach ($objTipoProductos as $tipo) { ?>
                                             <option value="<?php echo $tipo->tip_pro_id ?>"><?php echo $tipo->tip_descripcion ?></option>
                                         <?php } ?>
@@ -47,7 +49,7 @@
 
                         <div class="box-footer">
                             <div class="col-sm-3"></div>
-                            <button type="submit" class="btn btn-primary" onclick="valida_envia()">Registrar</button>
+                            <button type="submit" class="btn btn-primary">Registrar</button>
                         </div>
 
                     </form><!-- /.form-->

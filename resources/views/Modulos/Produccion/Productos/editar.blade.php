@@ -1,5 +1,8 @@
 @extends('menu.estructura')
 @section('content')
+<!-- invocamos el  archivo con las validaciones del formulario "Editar producto" -->
+@include('plantilla.validaciones.produccion.productoEditar')
+
 <!-- Main content -->
 <section class="content">
     <!-- Default box -->
@@ -20,7 +23,7 @@
                     <?php foreach($productos as $producto){?>
                     <form name="signupForm1" id="signupForm1" class="form-horizontal" method="POST" autocomplete="off" action="<?php echo url("producto/editar/")?>">
                         <div class="box-body">
-                            <input type="hidden" name="id" value="<?php echo $producto->pro_id ?>"?>
+                            <input type="hidden" name="id" value="<?php echo $producto->pro_id ?>">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div class="col-xs-12">
                                 <h2 class="page-header">

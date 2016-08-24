@@ -1,6 +1,9 @@
 @extends('menu.estructura')
 @section('content')
 
+<!-- invocamos el  archivo con las validaciones del formulario "Crear empresa" -->
+@include('plantilla.validaciones.administracion.empresaCrear')
+
 <!-- Default box -->
 <div class="box">
     <div class="box-header with-border">
@@ -50,7 +53,7 @@
                             <label class="col-sm-3 control-label" for="ciu_id">Ciudad</label>
                             <div class="col-xs-9">
                                 <select class="form-control select2-single" name="ciu_id" id="ciu_id" placeholder="Ciudad" required>
-                                    <option>Selecciona Ciudad</option>
+                                    <option value="">Selecciona Ciudad</option>
                                     <?php foreach ($objCiudad as $Ciudad){?>
                                        <option value="<?php echo $Ciudad->ciu_id ?>"><?php echo $Ciudad->ciu_nombre ?></option>
                                     <?php }?>
@@ -66,14 +69,14 @@
                         <div class="col-lg-6 form-group">
                             <label class="col-sm-3 control-label" for="emp_correo">Correo </label>
                             <div class="col-xs-9">
-                                <input type="text" class="form-control" placeholder="tucorreo@ejemplo.com" title="Ingrese su correo electrónico" class="span3" pattern="^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,3})$" title="tucorreo@dominio.com" id="emp_correo"  name="emp_correo"  onpaste="return false" required>
+                                <input type="text" class="form-control" placeholder="tucorreo@ejemplo.com" title="Ingrese su correo electrónico" class="span3"  title="tucorreo@dominio.com" id="emp_correo"  name="emp_correo"  onpaste="return false" required>
                             </div>
                         </div>
                         <div class="col-lg-6 form-group">
                             <label class="col-sm-3 control-label" for="tip_cli_id">Tipo Cliente</label>
                             <div class="col-sm-9">
                                 <select class="form-control select2-single" name="tip_cli_id" id="tip_cli_id" required>
-                                    <option>Selecciona Tipo Cliente</option>
+                                    <option value="">Selecciona Tipo Cliente</option>
                                     <?php foreach ($objTipoCliente as $TipoCliente){?>
                                        <option value="<?php echo $TipoCliente->tip_cli_id?>"><?php echo $TipoCliente->tip_cli_descripcion ;?></option>
                                     <?php }?>

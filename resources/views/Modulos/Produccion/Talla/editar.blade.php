@@ -1,5 +1,8 @@
 @extends('menu.estructura')
 @section('content')
+<!-- invocamos el  archivo con las validaciones del formulario "Editar talla" -->
+@include('plantilla.validaciones.produccion.tallaEditar')
+
 <!-- Main content -->
 <section class="content">
     <!-- Default box -->
@@ -17,51 +20,53 @@
                     <div class="box-header">
                         <h3 class="box-title"></h3>
                     </div><!-- /.box-header -->
-                    <?php foreach($objTalla as $talla){?>
+                    <?php foreach ($objTalla as $talla) { ?>
 
-                    <form name="formularioTalla" class="form-horizontal" method="post" autocomplete="off" action="<?php echo url("talla/editar") ?>">
-                        <div class="box-body">
-                            <input type="hidden" name="id" value="<?php echo $talla->tal_id ?>"?>
-                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <form name="formularioTalla" id="formularioTalla" class="form-horizontal" method="post" autocomplete="off" action="<?php echo url("talla/editar") ?>">
+                            <div class="box-body">
+                                <input type="hidden" name="id" value="<?php echo $talla->tal_id ?>">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-                            <div class="col-xs-12">
-                                <h2 class="page-header">
-                                    <i class="fa fa-user"></i><font><font>Informacion General
-                                </h2>
-                            </div>
-
-                            <div class="col-lg-6 form-group">
-                                <label class="col-sm-3 control-label" for="nombre-talla">Dimensi&oacute;n</label>
-
-                                <div class="col-xs-9">
-                                    <input type="text" class="form-control" name="dimension" value="<?php echo $talla->tal_dimension ?>">
+                                <div class="col-xs-12">
+                                    <h2 class="page-header">
+                                        <i class="fa fa-user"></i><font><font>Informacion General
+                                    </h2>
                                 </div>
-                            </div>
 
-                            <div class="col-lg-6 form-group">
-                                <label class="col-sm-3 control-label" for="nombre-talla">Tipo de producto</label>
+                                <div class="col-lg-6 form-group">
+                                    <label class="col-sm-3 control-label" for="nombre-talla">Dimensi&oacute;n</label>
 
-                                <div class="col-lg-9">
-                                    <select class="form-control select2-single" name="tipo_producto" placeholder="Nombre">
-
-                                        <?php foreach ($objTipoProductos as $tipo):
-                                            if($talla->tip_pro_id == $tipo->tip_pro_id):?>
-                                                <option value="<?php echo $tipo->tip_pro_id?>" selected><?php echo $tipo->tip_descripcion ?></option>
-                                            <?php else: ?>
-                                                <option value="<?php echo $tipo->tip_pro_id?>"><?php echo $tipo->tip_descripcion ?></option>
-
-                                            <?php endif;
-                                            endforeach;?>
-                                    </select>
+                                    <div class="col-xs-9">
+                                        <input type="text" class="form-control" name="dimension" id="dimension" value="<?php echo $talla->tal_dimension ?>">
+                                    </div>
                                 </div>
+
+                                <div class="col-lg-6 form-group">
+                                    <label class="col-sm-3 control-label" for="nombre-talla">Tipo de producto</label>
+
+                                    <div class="col-lg-9">
+                                        <select class="form-control select2-single" name="tipo_producto" id="tipoproducto" placeholder="Nombre">
+
+                                            <?php foreach ($objTipoProductos as $tipo):
+                                                if ($talla->tip_pro_id == $tipo->tip_pro_id):
+                                                    ?>
+                                                    <option value="<?php echo $tipo->tip_pro_id ?>" selected><?php echo $tipo->tip_descripcion ?></option>
+        <?php else: ?>
+                                                    <option value="<?php echo $tipo->tip_pro_id ?>"><?php echo $tipo->tip_descripcion ?></option>
+
+                                                <?php endif;
+                                            endforeach;
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>
+
                             </div>
 
-                        </div>
-
-                        <div class="box-footer">
-                            <button type="submit" class="btn btn-primary" >Editar</button>
-                        </div>
-                        <?php }?>
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary" >Editar</button>
+                            </div>
+<?php } ?>
 
                     </form><!-- /.form-->
                 </div><!-- /.box box-primary -->

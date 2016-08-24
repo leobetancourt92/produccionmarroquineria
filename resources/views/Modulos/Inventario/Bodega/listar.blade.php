@@ -20,26 +20,19 @@
                             <table id="tabla" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
-                                    <td>No</td>
-                                    <td>Descripcion</td>
-                                    <td>Color</td>
-                                    <td>Talla</td>
-                                    <td>Cantidad</td>
-                                    <td>Costo</td>
-
+                                    <td>No Bodega</td>
+                                    <td>Codigo Producto</td>
+                                    <td>Descripcion Producto</td>
+                                    <td>Cantidad Total</td>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <?php foreach($bodega as $producto){?>
                                     <tr>
-                                        <td><?php //echo $producto->pro_id ?></td>
-                                        <td><?php //echo $producto->pro_descripcion ?></td>
-                                        <td><?php //echo $producto->tal_dimension?></td>
-                                        <td><?php ///echo $producto->col_descripcion ?></td>
-                                        <td><?php //echo $producto->pro_cantidad ?></td>
-                                        <td><?php //echo $producto->pro_costo?></td>
-
-                                    </tr>
+                                        <td><?php echo $producto->bod_id ?></td>
+                                        <td><?php echo $producto->pro_id ?></td>
+                                        <td><?php echo $producto->pro_descripcion?></td>
+                                        <td><?php echo $producto->bod_total ?></td>
                                 <?php }?>
                                 </tbody>
                             </table>

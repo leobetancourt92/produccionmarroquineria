@@ -1,5 +1,8 @@
 @extends('menu.estructura')
 @section('content')
+
+<!-- invocamos el  archivo con las validaciones del formulario "Crear producto" -->
+@include('plantilla.validaciones.produccion.productoCrear')
 <!-- Main content -->
 <section class="content">
     <!-- Default box -->
@@ -23,14 +26,14 @@
                             <div class="col-lg-6 form-group">
                                 <label class="col-sm-3 control-label" for="nombre">Descripcion</label>
                                 <div class="col-xs-9">
-                                    <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripcion" required>
+                                    <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripcion" >
                                 </div>
                             </div>
 
                             <div class="col-lg-6 form-group">
                                 <label class="col-sm-3 control-label" for="cantidad">Cantidad</label>
                                 <div class="col-xs-9">
-                                    <input type="text" class="form-control" id="cantidad" name="cantidad" placeholder="Cantidad" required>
+                                    <input type="text" class="form-control" id="cantidad" name="cantidad" placeholder="Cantidad" >
                                 </div>
                             </div>
 
@@ -45,7 +48,7 @@
                                 <label class="col-sm-3 control-label" for="talla">Talla</label>
                                 <div class="col-lg-9">
                                     <select class="form-control select2-single" id="talla" name="talla">
-                                        <option>Selecciona Talla</option>
+                                        <option value="">Selecciona Talla</option>
                                         <?php foreach ($objTalla as $talla){?>
                                             <option value="<?php echo $talla->tal_id?>"><?php echo $talla->tal_dimension ?></option>
                                         <?php }?>
@@ -57,7 +60,7 @@
                                 <label class="col-sm-3 control-label" for="color">Color</label>
                                 <div class="col-lg-9">
                                     <select class="form-control select2-single" id="color" name="color">
-                                        <option>Selecciona Color</option>
+                                        <option value="" >Selecciona Color</option>
                                         <?php foreach ($objColor as $color){?>
                                            <option value="<?php echo $color->col_id?>"><?php echo $color->col_descripcion ?></option>
                                         <?php }?>

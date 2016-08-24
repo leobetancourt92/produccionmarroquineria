@@ -1,5 +1,8 @@
 @extends('menu.estructura')
 @section('content')
+
+<!-- invocamos el  archivo con las validaciones del formulario "Crear usuario" -->
+@include('plantilla.validaciones.usuarios.usuariosCrear')
 <!-- Main content -->
 <section class="content">
     <!-- Default box -->
@@ -26,35 +29,35 @@
                                 <label class="col-sm-3 control-label">Nombre</label>
 
                                 <div class="col-xs-9">
-                                    <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" >
                                 </div>
                             </div>
                             <div class="col-sm-8 form-group">
                                 <label class="col-sm-3 control-label">Apellido</label>
 
                                 <div class="col-xs-9">
-                                    <input type="text" class="form-control" name="apellido" placeholder="Apellido" required>
+                                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" >
                                 </div>
                             </div>
                             <div class="col-sm-8 form-group">
                                 <label class="col-sm-3 control-label">Email</label>
 
                                 <div class="col-xs-9">
-                                    <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" >
                                 </div>
                             </div>
                             <div class="col-sm-8 form-group">
                                 <label class="col-sm-3 control-label">Contraseña</label>
 
                                 <div class="col-xs-9">
-                                    <input type="password" class="form-control" name="pass" placeholder="Contraseña" required>
+                                    <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña" >
                                 </div>
                             </div>
                              <div class="col-sm-8 form-group">
                                 <label class="col-sm-3 control-label">Confirmar Contraseña</label>
 
                                 <div class="col-xs-9">
-                                    <input type="password" class="form-control" name="pass-confirm" placeholder="Confirmar contraseña" required>
+                                    <input type="password" class="form-control" id="passconfirm" name="pass-confirm" placeholder="Confirmar contraseña" >
                                 </div>
                             </div>
                             
@@ -63,7 +66,7 @@
 
                         <div class="box-footer">
                             <div class="col-sm-3"></div>
-                            <button type="submit" class="btn btn-primary" onclick="valida_envia()">Registrar</button>
+                            <button type="submit" class="btn btn-primary" >Registrar</button>
                         </div>
 
                     </form><!-- /.form-->
