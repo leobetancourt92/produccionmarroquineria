@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.15.7
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
--- Servidor: localhost
--- Tiempo de generación: 23-08-2016 a las 08:02:55
--- Versión del servidor: 10.0.25-MariaDB
--- Versión de PHP: 5.5.14
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 24-08-2016 a las 04:23:14
+-- Versión del servidor: 10.1.9-MariaDB
+-- Versión de PHP: 5.6.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `pp_marroquineria`
 --
-CREATE DATABASE IF NOT EXISTS `pp_marroquineria` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `pp_marroquineria`;
 
 -- --------------------------------------------------------
 
@@ -28,7 +26,7 @@ USE `pp_marroquineria`;
 -- Estructura de tabla para la tabla `bodega`
 --
 
-CREATE TABLE IF NOT EXISTS `bodega` (
+CREATE TABLE `bodega` (
   `bod_id` int(11) NOT NULL,
   `pro_id` int(11) NOT NULL,
   `bod_total` int(11) DEFAULT NULL
@@ -40,10 +38,10 @@ CREATE TABLE IF NOT EXISTS `bodega` (
 -- Estructura de tabla para la tabla `ciudad`
 --
 
-CREATE TABLE IF NOT EXISTS `ciudad` (
+CREATE TABLE `ciudad` (
   `ciu_id` int(11) NOT NULL,
   `ciu_nombre` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2217 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `ciudad`
@@ -2273,11 +2271,11 @@ INSERT INTO `ciudad` (`ciu_id`, `ciu_nombre`) VALUES
 -- Estructura de tabla para la tabla `color`
 --
 
-CREATE TABLE IF NOT EXISTS `color` (
+CREATE TABLE `color` (
   `col_id` int(11) NOT NULL,
   `col_descripcion` varchar(100) DEFAULT NULL,
   `col_estado` tinyint(1) DEFAULT '1'
-) ENGINE=InnoDB AUTO_INCREMENT=141 DEFAULT CHARSET=utf8 COMMENT='	';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='	';
 
 --
 -- Volcado de datos para la tabla `color`
@@ -2431,7 +2429,7 @@ INSERT INTO `color` (`col_id`, `col_descripcion`, `col_estado`) VALUES
 -- Estructura de tabla para la tabla `detalle_orden_de_compra`
 --
 
-CREATE TABLE IF NOT EXISTS `detalle_orden_de_compra` (
+CREATE TABLE `detalle_orden_de_compra` (
   `pro_id` int(11) NOT NULL,
   `ord_com_id` int(11) NOT NULL,
   `det_com_cantidad` int(11) DEFAULT NULL,
@@ -2455,7 +2453,7 @@ INSERT INTO `detalle_orden_de_compra` (`pro_id`, `ord_com_id`, `det_com_cantidad
 -- Estructura de tabla para la tabla `empresa`
 --
 
-CREATE TABLE IF NOT EXISTS `empresa` (
+CREATE TABLE `empresa` (
   `emp_id` int(11) NOT NULL,
   `emp_nit` varchar(100) DEFAULT NULL,
   `emp_razon_social` varchar(100) DEFAULT NULL,
@@ -2467,7 +2465,7 @@ CREATE TABLE IF NOT EXISTS `empresa` (
   `tip_cli_id` int(11) NOT NULL,
   `ciu_id` int(11) NOT NULL,
   `emp_nombres` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `empresa`
@@ -2483,13 +2481,13 @@ INSERT INTO `empresa` (`emp_id`, `emp_nit`, `emp_razon_social`, `emp_telefono`, 
 -- Estructura de tabla para la tabla `orden_de_compra`
 --
 
-CREATE TABLE IF NOT EXISTS `orden_de_compra` (
+CREATE TABLE `orden_de_compra` (
   `ord_com_id` int(11) NOT NULL,
   `ord_com_fecha` date DEFAULT NULL,
   `ord_com_total` int(11) DEFAULT NULL,
   `ord_com_estado` varchar(45) DEFAULT NULL,
   `ord_tipo_cli` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `orden_de_compra`
@@ -2508,7 +2506,7 @@ INSERT INTO `orden_de_compra` (`ord_com_id`, `ord_com_fecha`, `ord_com_total`, `
 -- Estructura de tabla para la tabla `persona`
 --
 
-CREATE TABLE IF NOT EXISTS `persona` (
+CREATE TABLE `persona` (
   `per_id` int(11) NOT NULL,
   `per_telefono` varchar(20) DEFAULT NULL,
   `per_direccion` varchar(100) DEFAULT NULL,
@@ -2520,7 +2518,7 @@ CREATE TABLE IF NOT EXISTS `persona` (
   `per_identificacion` int(11) DEFAULT NULL,
   `per_nombres` varchar(100) DEFAULT NULL,
   `per_apellidos` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=1005 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `persona`
@@ -3538,7 +3536,7 @@ INSERT INTO `persona` (`per_id`, `per_telefono`, `per_direccion`, `per_correo`, 
 -- Estructura de tabla para la tabla `producto`
 --
 
-CREATE TABLE IF NOT EXISTS `producto` (
+CREATE TABLE `producto` (
   `pro_id` int(11) NOT NULL,
   `pro_descripcion` varchar(100) DEFAULT NULL,
   `pro_costo` int(11) DEFAULT NULL,
@@ -3546,7 +3544,7 @@ CREATE TABLE IF NOT EXISTS `producto` (
   `tal_id` int(11) NOT NULL,
   `col_id` int(11) NOT NULL,
   `pro_estado` tinyint(1) DEFAULT '1'
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `producto`
@@ -3562,12 +3560,12 @@ INSERT INTO `producto` (`pro_id`, `pro_descripcion`, `pro_costo`, `pro_cantidad`
 -- Estructura de tabla para la tabla `talla`
 --
 
-CREATE TABLE IF NOT EXISTS `talla` (
+CREATE TABLE `talla` (
   `tal_id` int(11) NOT NULL,
   `tal_dimension` varchar(50) DEFAULT NULL,
   `tip_pro_id` int(11) NOT NULL,
   `tal_estado` tinyint(1) DEFAULT '1'
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `talla`
@@ -3583,10 +3581,10 @@ INSERT INTO `talla` (`tal_id`, `tal_dimension`, `tip_pro_id`, `tal_estado`) VALU
 -- Estructura de tabla para la tabla `tipo_cliente`
 --
 
-CREATE TABLE IF NOT EXISTS `tipo_cliente` (
+CREATE TABLE `tipo_cliente` (
   `tip_cli_id` int(11) NOT NULL,
   `tip_cli_descripcion` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tipo_cliente`
@@ -3602,17 +3600,17 @@ INSERT INTO `tipo_cliente` (`tip_cli_id`, `tip_cli_descripcion`) VALUES
 -- Estructura de tabla para la tabla `tipo_producto`
 --
 
-CREATE TABLE IF NOT EXISTS `tipo_producto` (
+CREATE TABLE `tipo_producto` (
   `tip_pro_id` int(11) NOT NULL,
   `tip_descripcion` varchar(50) DEFAULT NULL,
   `tipo_estado` tinyint(1) DEFAULT '1'
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tipo_producto`
 --
 
-INSERT INTO `tipo_producto` (`tip_pro_id`, `tip_descripcion`, `tipo_estado`) VALUES
+INSERT INTO `tipo_producto` (`tip_pro_id`, `tip_descripcion`, tip_estado) VALUES
 (1, 'zapatos', 1),
 (3, 'botas', 1);
 
@@ -3622,14 +3620,14 @@ INSERT INTO `tipo_producto` (`tip_pro_id`, `tip_descripcion`, `tipo_estado`) VAL
 -- Estructura de tabla para la tabla `usuarios`
 --
 
-CREATE TABLE IF NOT EXISTS `usuarios` (
+CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `nombre` varchar(100) DEFAULT NULL,
   `apellido` varchar(100) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(60) DEFAULT NULL,
   `remember_token` varchar(100) NOT NULL,
-  `create_at` timestamp(6) NULL DEFAULT NULL,
+  `created_at` timestamp(6) NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `estado` tinyint(1) DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -3638,7 +3636,8 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `email`, `password`, `remember_token`, `create_at`, `updated_at`, `estado`) VALUES
+INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `estado`) VALUES
+(0, 'ANDRES FELIPE', 'GARCIA SERNA', 'PIPE960@HOTMAIL.COM', '123', '', '2016-08-24 07:19:40.000000', '2016-08-24 07:19:40', 1),
 (1, 'Desarrollo', 'Desarrollo', 'desarrollo@sena.com', '$2y$10$9R/SilIaZWVfMiNk38nyJuyP98lxQXkhY1Vec/b0OccP1UkN332gG', 'xfq9om8P7xJcbYYIbWn14HhnhHoTFhVBcr85a9qBdQC3sj5dzo1BW5HzWI39', '2016-08-15 19:55:41.971000', '2016-08-23 12:59:58', 1),
 (2, 'coordinador', 'coordinador', 'coordinador@sena.com', '$2y$10$9R/SilIaZWVfMiNk38nyJuyP98lxQXkhY1Vec/b0OccP1UkN332gG', 'MZM2xVmnvVjt9v03roWKcWNy8xIdpJo4SIq4s8eic4EsQDZ7WBqCPqQ2ag8t', '2016-08-15 20:10:26.755000', '2016-08-23 12:58:47', 1);
 
@@ -3742,47 +3741,47 @@ ALTER TABLE `bodega`
 -- AUTO_INCREMENT de la tabla `ciudad`
 --
 ALTER TABLE `ciudad`
-  MODIFY `ciu_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2217;
+  MODIFY `ciu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2217;
 --
 -- AUTO_INCREMENT de la tabla `color`
 --
 ALTER TABLE `color`
-  MODIFY `col_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=141;
+  MODIFY `col_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 --
 -- AUTO_INCREMENT de la tabla `empresa`
 --
 ALTER TABLE `empresa`
-  MODIFY `emp_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `emp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `orden_de_compra`
 --
 ALTER TABLE `orden_de_compra`
-  MODIFY `ord_com_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=34;
+  MODIFY `ord_com_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 --
 -- AUTO_INCREMENT de la tabla `persona`
 --
 ALTER TABLE `persona`
-  MODIFY `per_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1005;
+  MODIFY `per_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1005;
 --
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `talla`
 --
 ALTER TABLE `talla`
-  MODIFY `tal_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `tal_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `tipo_cliente`
 --
 ALTER TABLE `tipo_cliente`
-  MODIFY `tip_cli_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `tip_cli_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `tipo_producto`
 --
 ALTER TABLE `tipo_producto`
-  MODIFY `tip_pro_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `tip_pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- Restricciones para tablas volcadas
 --

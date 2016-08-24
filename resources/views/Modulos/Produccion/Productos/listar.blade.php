@@ -22,8 +22,8 @@
                                         <tr>
                                             <td>No</td>
                                             <td>Descripcion</td>
-                                            <td>Color</td>
                                             <td>Talla</td>
+                                            <td>Color</td>
                                             <td>Cantidad</td>
                                             <td>Costo</td>
                                             <td>Estado</td>

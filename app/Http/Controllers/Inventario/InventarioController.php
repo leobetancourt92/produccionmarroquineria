@@ -29,6 +29,12 @@ class InventarioController extends Controller {
     return view("Modulos.Inventario.OrdenCompra.crear", compact('products', 'person', 'business'));
   }
 
+  public function getBodega() {
+    $sql= "select b.bod_id, p.pro_id,p.pro_descripcion,b.bod_total from bodega b JOIN producto p ON b.pro_id= p.pro_id";
+    $bodega = \DB::select($sql);
+    return view("Modulos.Inventario.Bodega.listar", compact('bodega'));
+  }
+
   public function postCreate(Request $request) {
 
     foreach ($request->product as $key => $val) {
