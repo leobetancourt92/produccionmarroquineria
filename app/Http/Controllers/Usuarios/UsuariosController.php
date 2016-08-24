@@ -45,6 +45,7 @@ class UsuariosController extends Controller {
     $objUser->email    = $email;
     $objUser->password = $contraseña;
     $objUser->estado   = 1;
+    $objUser->save();
     return \Redirect::to('usuario/listar');
 //        return view("Modulos.Produccion.Talla.listar", compact("objTalla"));
   }

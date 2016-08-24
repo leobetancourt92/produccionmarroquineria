@@ -1,4 +1,7 @@
 <?php $__env->startSection('content'); ?>
+
+<!-- invocamos el  archivo con las validaciones del formulario "Crear usuario" -->
+<?php echo $__env->make('plantilla.validaciones.usuarios.usuariosCrear', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <!-- Main content -->
 <section class="content">
     <!-- Default box -->
@@ -21,46 +24,39 @@
                     <form name="formularios" id="formularios"  class="form-horizontal" method="post" autocomplete="off" action="<?php echo url("usuario/crear") ?>">
                         <div class="box-body">
                             <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
-
-                            <div class="col-xs-12">
-                                <h2 class="page-header">
-                                    <i class="fa fa-user"></i><font><font>Informacion General
-                                </h2>
-                            </div>
-
                             <div class="col-sm-8 form-group">
                                 <label class="col-sm-3 control-label">Nombre</label>
 
                                 <div class="col-xs-9">
-                                    <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" >
                                 </div>
                             </div>
                             <div class="col-sm-8 form-group">
                                 <label class="col-sm-3 control-label">Apellido</label>
 
                                 <div class="col-xs-9">
-                                    <input type="text" class="form-control" name="apellido" placeholder="Apellido" required>
+                                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" >
                                 </div>
                             </div>
                             <div class="col-sm-8 form-group">
                                 <label class="col-sm-3 control-label">Email</label>
 
                                 <div class="col-xs-9">
-                                    <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" >
                                 </div>
                             </div>
                             <div class="col-sm-8 form-group">
                                 <label class="col-sm-3 control-label">Contraseña</label>
 
                                 <div class="col-xs-9">
-                                    <input type="password" class="form-control" name="pass" placeholder="Contraseña" required>
+                                    <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña" >
                                 </div>
                             </div>
                              <div class="col-sm-8 form-group">
                                 <label class="col-sm-3 control-label">Confirmar Contraseña</label>
 
                                 <div class="col-xs-9">
-                                    <input type="password" class="form-control" name="pass-confirm" placeholder="Confirmar contraseña" required>
+                                    <input type="password" class="form-control" id="passconfirm" name="pass-confirm" placeholder="Confirmar contraseña" >
                                 </div>
                             </div>
                             
@@ -69,7 +65,7 @@
 
                         <div class="box-footer">
                             <div class="col-sm-3"></div>
-                            <button type="submit" class="btn btn-primary" onclick="valida_envia()">Registrar</button>
+                            <button type="submit" class="btn btn-primary" >Registrar</button>
                         </div>
 
                     </form><!-- /.form-->
