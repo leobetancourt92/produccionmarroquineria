@@ -1,7 +1,7 @@
 <script>
     $( ".select2-single, .select2-multiple" ).select2( {
         theme: "bootstrap",
-        placeholder: "Select a State",
+        placeholder: "Seleccione una opcion",
         maximumSelectionSize: 6,
         containerCssClass: ':all:'
     } );
@@ -20,9 +20,9 @@
 <!-- SweetAlert -->
 <script src="{{ asset('js/sweetalert.min.js') }}" type="text/javascript"></script>
 <!-- FormValidate -->
-<script src="{{ asset('js/require_form.js') }}" type="text/javascript"></script>
+<!--<script src="{{ asset('js/require_form.js') }}" type="text/javascript"></script>-->
 <!-- Validate.js-->
-<script src="{{ asset('js/jquery.validate.js') }}" type="text/javascript"></script>
+<!--<script src="{{ asset('js/jquery.validate.js') }}" type="text/javascript"></script>-->
 <!-- Bootstrap 3.3.2 JS -->
 <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
 <!-- FastClick -->
