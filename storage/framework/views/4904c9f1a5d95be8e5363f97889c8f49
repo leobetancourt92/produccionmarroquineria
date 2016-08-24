@@ -4,7 +4,7 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="<?php echo url("img/SENA.jpg")?>" class="img-circle" alt="User Image">
+                <img src="<?php echo url("img/sena.jpg")?>" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
                 <p><?php echo $nombre = Auth::user()->nombre; ?></p>
@@ -96,8 +96,7 @@
                     <li>
                         <a href="#"><i class="fa fa-ticket"></i> Bodega <i class="fa fa-angle-left pull-right"></i></a>
                         <ul class="treeview-menu">
-                            <li><a href="<?php echo e(url('')); ?>"><i class="fa fa-circle-o"></i> Crear</a></li>
-                            <li><a href="<?php echo e(url('')); ?>"><i class="fa fa-circle-o"></i> Consultar</a></li>
+                            <li><a href="<?php echo e(url('inventario/bodega')); ?>"><i class="fa fa-circle-o"></i> Consultar</a></li>
                         </ul>
                     </li>
                     <li>
