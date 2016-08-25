@@ -1,0 +1,90 @@
+<?php $__env->startSection('content'); ?>
+<!-- Main content -->
+<section class="content">
+  <!-- Default box -->
+  <div class="box">
+    <div class="box-header with-border">
+      <center><h3 class="box-title">Orden de compra</h3></center>
+      <div class="box-tools pull-right">
+        <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i
+            class="fa fa-minus"></i></button>
+      </div>
+    </div>
+    <div class="box-body">
+      <div class="col-md-12">
+        <!-- general form elements -->
+        <div class="box box-primary">
+          <div class="box-success">
+            <div class="table-responsive">
+              <table id="tabla" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <td>No</td>
+                    <td>Fecha</td>
+                    <td>Total</td>
+                    <td>Estado</td>
+                    <td>Cliente</td>
+                    <td>Producto</td>
+                    <td>Cantidad</td>
+                    <td>Accion</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php foreach($purchaseOrders as $purchaseOrder): ?>
+                  <tr>
+                    <td><?php echo e($purchaseOrder->ord_com_id); ?></td>
+                    <td><?php echo e($purchaseOrder->ord_com_fecha); ?></td>
+                    <td><?php echo e($purchaseOrder->ord_com_total); ?></td>
+                    <td>
+                      <?php if($purchaseOrder->ord_com_estado == 0): ?>
+                      <button class="btn btn-danger glyphicon glyphicon-hand-down" data-toggle="tooltip" title="Inactivo"></button>
+                      <?php else: ?>
+                      <button class="btn btn-success glyphicon glyphicon-hand-up" data-toggle="tooltip" title="Activo"></button>
+                      <?php endif; ?>
+                    </td>
+                    <td>
+                      <?php if(strrpos($purchaseOrder->ord_tipo_cli, 'p')): ?>
+                      <?php foreach($persons as $person): ?>
+                      <?php $purchaseOrder->ord_tipo_cli = str_replace(', p', '', $purchaseOrder->ord_tipo_cli) ?>
+                      <?php if($purchaseOrder->ord_tipo_cli == $person->per_id): ?>
+                      <?php echo e($person->per_nombres.' '.$person->per_apellidos); ?>
+
+                      <?php endif; ?>
+                      <?php endforeach; ?>
+                      <?php else: ?>
+                      <?php foreach($business as $busines): ?>
+                      <?php $purchaseOrder->ord_tipo_cli = str_replace(', b', '', $purchaseOrder->ord_tipo_cli) ?>
+                      <?php if($purchaseOrder->ord_tipo_cli == $busines->emp_id): ?>
+                      <?php echo e($busines->emp_nombres); ?>
+
+                      <?php endif; ?>
+                      <?php endforeach; ?>
+                      <?php endif; ?>
+                    </td>
+                    <td>
+                      <?php foreach($products as $product): ?>
+                      <?php if($purchaseOrder->pro_id == $product->pro_id): ?>
+                      <?php echo e($product->pro_descripcion); ?>
+
+                      <?php endif; ?>
+                      <?php endforeach; ?>
+                    </td>
+                    <td><?php echo e($purchaseOrder->det_com_cantidad); ?></td>
+                    <td>
+                      <button class="btn btn-warning" data-toggle="tooltip" title="Aprobar">
+                        <a href="<?php echo e(url('inventario/state?id=').$purchaseOrder->ord_com_id); ?>" class="glyphicon glyphicon-hand-left" style="color: white"></a>
+                      </button>
+                    </td>
+                  </tr>
+                  <?php endforeach; ?>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div><!-- /.box box-primary -->
+      </div><!-- /.col-md-12 -->
+    </div><!-- /.box-body -->
+  </div><!-- /.box-->
+</section>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('menu.estructura', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

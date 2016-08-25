@@ -4,7 +4,7 @@
 
 <div class="login-box">
 	<div class="login-logo">
-		<a href="{{ url('/auth/login') }}"><b>Marroquienria </b>C.D.T.I</a>
+		<a href="{{ url('/auth/login') }}"><b>Marroquineria  </b>C.D.T.I</a>
 	</div>
 	<!-- /.login-logo -->
 	@section('content')
