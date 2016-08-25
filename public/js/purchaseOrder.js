@@ -68,13 +68,13 @@ jQuery('.add').click(function () {
 
 jQuery('.save').click(function () {
   $.ajax({
-    url: '/inventario/create',
+    url: '/produccionmarroquineria/public/inventario/create',
     type: 'POST',
     data: {
       'product': product,
       'entityId': entityId,
       'available': available,
-      '_token': token,
+      '_token': token
     },
     success: function (e) {
       jQuery('body').html(e);
