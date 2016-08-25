@@ -33,7 +33,7 @@
                             <div class="col-lg-6 form-group">
                                 <label class="col-sm-3 control-label" for="cantidad">Cantidad</label>
                                 <div class="col-xs-9">
-                                    <input type="text" class="form-control" id="cantidad" name="cantidad" placeholder="Cantidad" >
+                                    <input type="number" class="form-control" id="cantidad" name="cantidad" placeholder="Cantidad" >
                                 </div>
                             </div>
 

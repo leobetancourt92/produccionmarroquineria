@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
 
-<!-- invocamos el  archivo con las validaciones del formulario "Crear usuario" -->
+<!-- invocamos el  archivo con las validaciones del formulario "Cantidad de producto" -->
 <?php echo $__env->make('plantilla.validaciones.produccion.productoCantidad', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <!-- Main content -->
 <section class="content">
