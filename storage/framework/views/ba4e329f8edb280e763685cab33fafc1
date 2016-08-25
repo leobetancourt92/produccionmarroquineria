@@ -28,7 +28,7 @@
                     validators: {
                         notEmpty: {
                             message: 'El campo cantidad es requerido *'
-                        },, regexp: {
+                        }, regexp: {
                             regexp: /^[0-9_\.]+$/,
                             message: 'El campo cantidad solo acepta valores numericos *'
                         }
