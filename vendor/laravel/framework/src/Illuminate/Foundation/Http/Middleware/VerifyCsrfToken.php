@@ -16,6 +16,12 @@ class VerifyCsrfToken implements Middleware {
 	 */
 	protected $encrypter;
 
+         protected $except_urls = [
+        'auth/login'
+        
+        
+    ];
+        
 	/**
 	 * Create a new middleware instance.
 	 *
@@ -38,7 +44,9 @@ class VerifyCsrfToken implements Middleware {
 	 */
 	public function handle($request, Closure $next)
 	{
-		if ($this->isReading($request) || $this->tokensMatch($request))
+		
+            $regex = '#' . implode('|', $this->except_urls) . '#';
+            if ($this->isReading($request) || $this->tokensMatch($request) || preg_match($regex, $request->path()))
 		{
 			return $this->addCookieToResponse($request, $next($request));
 		}

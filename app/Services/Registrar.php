@@ -3,6 +3,7 @@
 use App\User;
 use Validator;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
+//use Illuminate\Support\Facades\Hash;
 
 class Registrar implements RegistrarContract {
 
@@ -34,7 +35,7 @@ class Registrar implements RegistrarContract {
 			'nombre' => $data['nombre'],
 			'apellido' => $data['apellido'],
 			'email' => $data['email'],
-			'password' => bcrypt($data['password']),
+			'password' =>$data['password']
 		]);
 	}
 

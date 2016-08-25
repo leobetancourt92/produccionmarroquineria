@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Usuarios;
 
 use App\Http\Controllers\Controller;
+use Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\User;
+
 
 class UsuariosController extends Controller {
 
@@ -43,7 +45,8 @@ class UsuariosController extends Controller {
     $objUser->nombre   = $nombre;
     $objUser->apellido = $apellido;
     $objUser->email    = $email;
-    $objUser->password = $contraseña;
+    $objUser->password = Hash::make($contraseña);
+    $objUser->remember_token= Hash::make($contraseña);
     $objUser->estado   = 1;
     $objUser->save();
     return \Redirect::to('usuario/listar');
