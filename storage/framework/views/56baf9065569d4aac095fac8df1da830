@@ -56,7 +56,7 @@
                                 <label class="col-sm-3 control-label">Confirmar Contraseña</label>
 
                                 <div class="col-xs-9">
-                                    <input type="password" class="form-control" id="passconfirm" name="pass-confirm" placeholder="Confirmar contraseña" >
+                                    <input type="password" class="form-control" id="passconfirm" name="passconfirm" placeholder="Confirmar contraseña" >
                                 </div>
                             </div>
                             

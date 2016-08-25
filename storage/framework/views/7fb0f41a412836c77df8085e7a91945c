@@ -1,4 +1,7 @@
 <?php $__env->startSection('content'); ?>
+
+<!-- invocamos el  archivo con las validaciones del formulario "Crear usuario" -->
+<?php echo $__env->make('plantilla.validaciones.inventario.inventarioCrear', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <!-- Main content -->
 <section class="invoice">
   <!-- title row -->
@@ -81,7 +84,7 @@
                           <td class="available"><?php echo $product->pro_cantidad ?></td>
                           <td class="cost"><?php echo $product->pro_costo ?></td>
                           <td>
-                            <input type="number" class="quantity" min="1" max="<?php echo e($product->pro_cantidad); ?>">
+                            <input type="number" id="number" class="quantity" min="1" max="<?php echo e($product->pro_cantidad); ?>">
                           </td>
                           <td>
 

@@ -1,5 +1,8 @@
 @extends('menu.estructura')
 @section('content')
+
+<!-- invocamos el  archivo con las validaciones del formulario "Cantidad de producto" -->
+@include('plantilla.validaciones.produccion.productoCantidad')
 <!-- Main content -->
 <section class="content">
     <!-- Default box -->
@@ -20,14 +23,14 @@
                     <?php foreach($productos as $producto){?>
                     <form name="signupForm1" id="signupForm1" class="form-horizontal" method="POST" autocomplete="off" action="<?php echo url("producto/cantidad/")?>">
                         <div class="box-body">
-                            <input type="hidden" name="id" value="<?php echo $producto->pro_id ?>"?>
+                            <input type="hidden" name="id" value="<?php echo $producto->pro_id ?>">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 
                             <div class="col-lg-6 form-group">
                                 <label class="col-sm-3 control-label" for="cantidad">Cantidad</label>
                                 <div class="col-xs-9">
-                                    <input type="text" class="form-control" id="cantidad" name="cantidad" required >
+                                    <input type="number" class="form-control" id="cantidad" name="cantidad" required >
                                 </div>
                             </div>
 

@@ -1,5 +1,8 @@
 @extends('menu.estructura')
 @section('content')
+
+<!-- invocamos el  archivo con las validaciones del formulario "Crear usuario" -->
+@include('plantilla.validaciones.inventario.inventarioCrear')
 <!-- Main content -->
 <section class="invoice">
   <!-- title row -->
@@ -82,7 +85,7 @@
                           <td class="available"><?php echo $product->pro_cantidad ?></td>
                           <td class="cost"><?php echo $product->pro_costo ?></td>
                           <td>
-                            <input type="number" class="quantity" min="1" max="{{ $product->pro_cantidad }}">
+                            <input type="number" id="number" class="quantity" min="1" max="{{ $product->pro_cantidad }}">
                           </td>
                           <td>
 

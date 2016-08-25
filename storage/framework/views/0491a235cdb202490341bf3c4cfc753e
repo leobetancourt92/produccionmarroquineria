@@ -1,7 +1,7 @@
 <script>
     $( ".select2-single, .select2-multiple" ).select2( {
         theme: "bootstrap",
-        placeholder: "Select a State",
+        placeholder: "Seleccione una opcion",
         maximumSelectionSize: 6,
         containerCssClass: ':all:'
     } );

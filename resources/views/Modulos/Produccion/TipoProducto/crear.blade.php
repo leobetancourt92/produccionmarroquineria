@@ -1,5 +1,8 @@
 @extends('menu.estructura')
 @section('content')
+
+<!-- invocamos el  archivo con las validaciones del formulario "Cantidad de producto" -->
+@include('plantilla.validaciones.produccion.tipoProductoCrear')
 <!-- Main content -->
 <section class="content">
     <!-- Default box -->
